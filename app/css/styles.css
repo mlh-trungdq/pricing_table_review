@@ -16,74 +16,142 @@ html {
 .color-white {
   color: #ffffff; }
 
+.img-responsive {
+  height: auto;
+  width: 100%; }
+
 .container {
-  display: flex;
-  justify-content: space-between;
-  margin: 0px 70px; }
+  padding: 0 21px; }
   .container .logo-main-menu {
+    display: flex;
+    justify-content: space-between;
     padding: 24px 0px; }
     .container .logo-main-menu .logo-site {
-      font-size: 1.75rem;
-      display: flex; }
-      .container .logo-main-menu .logo-site .logo-site-title {
-        padding: 7px 4px; }
-
-.nav-menu {
-  align-self: center;
-  display: table-cell;
-  text-align: right;
-  vertical-align: middle;
-  width: 99%; }
-  .nav-menu .primary-menu {
-    text-align: left;
-    white-space: nowrap;
-    display: inline-block;
-    font-size: 0;
-    margin: 0 -20px; }
-  .nav-menu ul li {
-    display: inline-block;
-    padding: 33px 3px; }
-    .nav-menu ul li a {
-      font-weight: 700;
-      font-size: 0.875rem;
-      color: #6e7985;
-      text-decoration: none;
-      padding: 0 15px; }
-    .nav-menu ul li :hover {
-      color: #08a6bc; }
-    .nav-menu ul li .active {
-      border: 2px solid #ffffff; }
+      text-align: center;
+      width: 164px; }
+      .container .logo-main-menu .logo-site a {
+        text-decoration: none; }
+  .container .nav-menu {
+    align-self: center; }
+    .container .nav-menu .menu-responsive {
+      list-style: none;
+      text-align: center;
+      display: none; }
+      .container .nav-menu .menu-responsive a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #4e4e4e;
+        padding: 16px; }
+  .container .menu-responsive.responsive {
+    display: block; }
+    .container .menu-responsive.responsive li {
+      padding: 15px; }
+      .container .menu-responsive.responsive li a {
+        color: #000000; }
+      .container .menu-responsive.responsive li :hover {
+        color: #08a6bc; }
 
 .slider {
-  text-align: center; }
+  text-align: center;
+  padding: 0px 44px; }
   .slider .container {
     flex-direction: column;
-    margin: 0 62px; }
+    margin: 0px 62px; }
     .slider .container .slide-icon {
-      margin: 92px 0px; }
-    .slider .container .big-title {
-      font-size: 5rem;
-      letter-spacing: 0.3rem; }
+      margin: 50px 0px; }
+    .slider .container .custom-big-title {
+      margin: 0px 59px; }
+      .slider .container .custom-big-title .big-title {
+        font-size: 3rem;
+        letter-spacing: 0.3rem;
+        margin: 21px 0px; }
     .slider .container .small-title {
       font-size: 1.5rem;
-      margin-top: 60px; }
-    .slider .container .btn-group {
-      margin-top: 66px; }
-      .slider .container .btn-group .cta {
-        text-decoration: none;
-        border: 2px solid #ffffff;
-        border-radius: 20px;
-        padding: 9px 20px;
-        margin: 0px 21px; }
-      .slider .container .btn-group :hover {
-        color: #00bcd4;
-        border-color: #00bcd4; }
+      padding-bottom: 106px;
+      max-width: 990px; }
+    .slider .container .cta {
+      text-decoration: none;
+      border: 2px solid #ffffff;
+      border-radius: 20px;
+      padding: 9px 20px;
+      margin: 0px 21px; }
+    .slider .container a:hover {
+      color: #08a6bc;
+      border-color: #08a6bc; }
     .slider .container .dot {
       cursor: pointer;
       height: 15px;
       width: 15px;
-      margin: 106px 12px 20px;
+      margin: 149px 12px 45px;
+      border: 2px solid #ffffff;
       border-radius: 50%;
       background-color: #08a6bc;
       display: inline-block;
       transition: background-color 0.6s ease; }
+
+.content {
+  margin-top: 142px;
+  padding: 0 44px; }
+  .content .dark-title {
+    padding-bottom: 157px; }
+    .content .dark-title .content-big-title {
+      text-align: center;
+      font-size: 3.125rem; }
+    .content .dark-title .content-description {
+      margin-top: 78px;
+      color: #aab3b9;
+      font-size: 1rem; }
+  .content .pricing-table-1 {
+    display: flex;
+    flex-wrap: wrap; }
+    .content .pricing-table-1 .pricing-table-1-item {
+      border: 1px solid #dfe5e8;
+      text-align: center;
+      margin-top: 62px;
+      background-color: #d3d6d8;
+      justify-content: center;
+      flex: 50%; }
+      .content .pricing-table-1 .pricing-table-1-item .master {
+        background-color: #ffffff; }
+      .content .pricing-table-1 .pricing-table-1-item .table-title {
+        text-transform: uppercase;
+        font-weight: 300;
+        color: #5f727f;
+        font-size: 24px;
+        padding: 33px 0; }
+      .content .pricing-table-1 .pricing-table-1-item .pricing-price {
+        background-color: #b0de79;
+        padding: 29px 10px;
+        color: #ffffff; }
+        .content .pricing-table-1 .pricing-table-1-item .pricing-price .pricing-cost {
+          font-size: 65px;
+          font-weight: 400; }
+      .content .pricing-table-1 .pricing-table-1-item .bg-pricing-2 {
+        background-color: #7ee0bf; }
+      .content .pricing-table-1 .pricing-table-1-item .bg-pricing-3 {
+        background-color: #83bce9; }
+      .content .pricing-table-1 .pricing-table-1-item .bg-pricing-4 {
+        background-color: #a289e8; }
+      .content .pricing-table-1 .pricing-table-1-item .pricing-row {
+        border-bottom: 1px solid #dfe5e8;
+        padding: 21px 0; }
+      .content .pricing-table-1 .pricing-table-1-item .strike {
+        text-decoration-line: line-through; }
+      .content .pricing-table-1 .pricing-table-1-item .none-border-bottom {
+        border-bottom: none; }
+      .content .pricing-table-1 .pricing-table-1-item .pricing-table-footer {
+        padding-bottom: 55px;
+        padding-top: 55px; }
+        .content .pricing-table-1 .pricing-table-1-item .pricing-table-footer .order-button {
+          cursor: pointer;
+          text-decoration: none;
+          color: #ffffff;
+          text-transform: uppercase;
+          font-weight: 600;
+          background-color: #393d50;
+          padding: 17px;
+          margin: 50px 0;
+          position: relative;
+          border-radius: 30px; }
+        .content .pricing-table-1 .pricing-table-1-item .pricing-table-footer :hover {
+          background-color: #83bce9; }

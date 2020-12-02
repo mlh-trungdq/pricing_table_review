@@ -1,6 +1,0 @@
-[1128/195426.425:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
-[1129/070434.179:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\maytinhnhapkhau.vn\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\60db8ead-94bd-4d16-88b2-c1799a5362cc: The system cannot find the path specified. (0x3)
-[1129/070434.200:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
-[1129/082453.332:ERROR:process_info.cc(359)] UncheckedAllocate
-[1129/082458.812:ERROR:process_info.cc(359)] UncheckedAllocate
-[1129/090237.953:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)

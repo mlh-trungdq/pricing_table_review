@@ -1,4 +1,3 @@
-@import url(desktop.css);
 html {
   box-sizing: border-box; }
 
@@ -42,17 +41,24 @@ html {
   color: #ff994e; }
 
 .container {
+  max-width: 1170px;
+  margin: 0 auto;
+  width: 100%;
   padding: 0 21px; }
+
+.text-big-title {
+  padding-bottom: 59px; }
 
 .logo-main-menu {
   display: flex;
   justify-content: space-between;
   padding: 24px 0px; }
   .logo-main-menu .logo-site {
-    text-align: center;
-    width: 164px; }
+    text-align: center; }
     .logo-main-menu .logo-site a {
       text-decoration: none; }
+  .logo-main-menu .menu-icon i {
+    padding-top: 7px; }
 
 .nav-menu {
   align-self: center; }
@@ -76,18 +82,23 @@ html {
       color: #08a6bc; }
 
 .slider {
-  text-align: center;
-  padding: 0px 44px; }
-  .slider .container {
-    flex-direction: column;
-    margin: 0px 62px; }
-    .slider .container .slide-icon {
-      margin: 50px 0px; }
-    .slider .container .small-title {
+  text-align: center; }
+  .slider .slider-content {
+    display: flex;
+    flex-direction: column; }
+    .slider .slider-content .big-title {
+      letter-spacing: 0.3rem;
+      font-size: 3rem;
+      margin: auto;
+      text-align: center; }
+    .slider .slider-content .slide-icon {
+      margin: 181px 0px; }
+    .slider .slider-content .small-title {
+      margin: auto;
       font-size: 1.5rem;
       padding-bottom: 106px;
       max-width: 990px; }
-    .slider .container .dot {
+    .slider .slider-content .dot {
       cursor: pointer;
       height: 15px;
       width: 15px;
@@ -97,74 +108,59 @@ html {
       background-color: #08a6bc;
       display: inline-block;
       transition: background-color 0.6s ease; }
-  .slider .custom-big-title {
-    margin: 0px 59px; }
-    .slider .custom-big-title .big-title {
-      font-size: 3rem;
-      letter-spacing: 0.3rem;
-      margin: 21px 0px; }
-  .slider .cta-container .cta {
-    text-decoration: none;
-    border: 2px solid #ffffff;
-    border-radius: 20px;
-    padding: 9px 20px;
-    margin: 6px 21px; }
-  .slider .cta-container a {
-    text-decoration: none; }
-  .slider .cta-container :hover {
-    color: #08a6bc;
-    border-color: #08a6bc; }
+    .slider .slider-content .cta-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center; }
+    .slider .slider-content .cta {
+      text-decoration: none;
+      border: 2px solid #ffffff;
+      border-radius: 20px;
+      padding: 9px 20px;
+      margin: 6px 21px;
+      width: 192px; }
+      .slider .slider-content .cta:hover {
+        border-color: #08a6bc; }
+    .slider .slider-content a {
+      text-decoration: none; }
+    .slider .slider-content .cta:hover .child {
+      color: #00bcd4; }
 
 .content {
-  margin-top: 142px;
-  padding: 0 44px; }
+  margin-top: 142px; }
   .content .dark-title {
-    margin-top: 142px;
-    padding: 0 44px 157px 0; }
+    display: flex;
+    flex-direction: column; }
     .content .dark-title .content-big-title {
-      text-align: center;
-      font-size: 3.125rem; }
+      font-size: 3.125rem;
+      margin: auto;
+      text-align: center; }
     .content .dark-title .content-description {
       margin-top: 78px;
       color: #aab3b9;
-      font-size: 1rem; }
+      font-size: 1rem;
+      text-align: center; }
   .content .pricing-table-1 {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
     .content .pricing-table-1 .pricing-price {
       background-color: #b0de79;
-      padding: 29px 10px;
       color: #ffffff; }
       .content .pricing-table-1 .pricing-price .pricing-cost {
         font-size: 65px;
         font-weight: 400; }
-    .content .pricing-table-1 .pricing-table-footer {
-      padding-bottom: 55px;
-      padding-top: 55px; }
-      .content .pricing-table-1 .pricing-table-footer .order-button {
-        cursor: pointer;
-        text-decoration: none;
-        color: #ffffff;
-        text-transform: uppercase;
-        font-weight: 700;
-        background-color: #393d50;
-        padding: 17px;
-        margin: 50px 0;
-        position: relative;
-        border-radius: 30px; }
-      .content .pricing-table-1 .pricing-table-footer :hover {
-        background-color: #83bce9; }
   .content .pricing-table-1-item {
-    width: 50%;
-    height: 50%;
-    margin: auto;
     max-width: 271px;
     border: 1px solid #dfe5e8;
     text-align: center;
     margin-top: 62px;
     background-color: #d3d6d8;
     justify-content: center;
-    flex: 100%; }
+    flex: 100%;
+    color: #5f727f; }
     .content .pricing-table-1-item .title-master {
       background-color: #ffffff;
       padding-top: 33px;
@@ -177,7 +173,8 @@ html {
       font-weight: 300;
       color: #5f727f;
       font-size: 24px;
-      padding: 33px 0; }
+      padding: 33px 0;
+      transition: 0.5s ease-in-out; }
     .content .pricing-table-1-item .bg-pricing-2 {
       background-color: #7ee0bf; }
     .content .pricing-table-1-item .bg-pricing-3 {
@@ -189,41 +186,69 @@ html {
       padding: 21px 0; }
     .content .pricing-table-1-item .none-border-bottom {
       border-bottom: none; }
-
-.aqua {
-  background-color: #08a6bc;
-  border: 10px solid rgba(71, 94, 97, 0.9); }
-
-.violet {
-  background-color: #a637ec;
-  border: 10px solid rgba(104, 74, 122, 0.9); }
-
-.hot-pink {
-  background-color: #ee417c;
-  border: 10px solid rgba(161, 90, 114, 0.9); }
-
-.orange {
-  background-color: #ff994e;
-  border: 10px solid rgba(168, 126, 95, 0.9); }
-
-.bg-title {
-  background-color: #393d50; }
-
-.pricing-table-2 {
-  background-image: url(../images/bag.jpg);
-  background-size: cover;
-  padding: 0 64px 74px 64px;
-  margin-top: 72px;
-  text-align: center; }
-  .pricing-table-2 .section-title {
-    font-size: 36px;
-    padding-top: 112px; }
-  .pricing-table-2 .pricing-table-2-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 21px 0px; }
-  .pricing-table-2 .pricing-table-2-item {
+  .content .pricing-table-footer {
+    padding-bottom: 55px;
+    padding-top: 55px;
+    transition: padding-top 0.5s, padding-bottom 0.5s; }
+    .content .pricing-table-footer .order-button {
+      cursor: pointer;
+      text-decoration: none;
+      color: #ffffff;
+      text-transform: uppercase;
+      font-weight: 700;
+      background-color: #393d50;
+      padding: 17px;
+      margin: 50px 0;
+      position: relative;
+      border-radius: 30px; }
+      .content .pricing-table-footer .order-button .fa-caret-down {
+        transform: rotate(-90deg);
+        margin-right: 10px; }
+    .content .pricing-table-footer :hover {
+      background-color: #83bce9;
+      transition: 0.5s ease-in-out; }
+  .content .pricing-table-1-item:hover {
+    background-color: #fff;
+    border-bottom: none;
+    border-top: none; }
+    .content .pricing-table-1-item:hover .table-title {
+      transform: translateY(-25px);
+      border: 1px solid #dfe5e8;
+      border-bottom: none; }
+    .content .pricing-table-1-item:hover .pricing-table-footer {
+      border: 1px solid #dfe5e8;
+      border-top: none; }
+      .content .pricing-table-1-item:hover .pricing-table-footer .space {
+        border: 1px solid #dfe5e8;
+        padding-bottom: 100px; }
+  .content .pricing-table-2 {
+    background-image: url(../images/bag.jpg);
+    background-size: cover;
+    margin-top: 72px;
+    text-align: center; }
+    .content .pricing-table-2 .aqua {
+      background-color: #08a6bc;
+      border: 10px solid rgba(71, 94, 97, 0.9); }
+    .content .pricing-table-2 .violet {
+      background-color: #a637ec;
+      border: 10px solid rgba(104, 74, 122, 0.9); }
+    .content .pricing-table-2 .hot-pink {
+      background-color: #ee417c;
+      border: 10px solid rgba(161, 90, 114, 0.9); }
+    .content .pricing-table-2 .orange {
+      background-color: #ff994e;
+      border: 10px solid rgba(168, 126, 95, 0.9); }
+    .content .pricing-table-2 .bg-title {
+      background-color: #393d50; }
+    .content .pricing-table-2 .section-title {
+      font-size: 2.25rem;
+      padding-top: 112px; }
+    .content .pricing-table-2 .pricing-table-2-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 74px 0px 90px; }
+  .content .pricing-table-2-item {
     background-color: #2c2e3d;
     padding: 31px 0px;
     max-width: 229px;
@@ -231,25 +256,42 @@ html {
     margin-top: 66px;
     text-align: center;
     flex: 100%;
-    border-radius: 150px 150px 0 0; }
-    .pricing-table-2 .pricing-table-2-item .price {
+    border-radius: 150px 150px 0 0;
+    display: flex;
+    flex-direction: column;
+    position: relative; }
+    .content .pricing-table-2-item .new-sticker {
+      height: 80px;
+      width: 80px;
+      border-radius: 40px;
+      background-color: #2c2e3d;
+      position: absolute;
+      margin-left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      text-align: center;
+      margin-top: -18px;
+      display: flex; }
+    .content .pricing-table-2-item .price {
       width: 180px;
       height: 180px;
       margin: auto;
-      border-radius: 50%; }
-      .pricing-table-2 .pricing-table-2-item .price .pricing-cost {
-        font-size: 2.625rem;
-        padding-top: 52px; }
-    .pricing-table-2 .pricing-table-2-item .table-title {
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .content .pricing-table-2-item .price .pricing-cost {
+        font-size: 2.625rem; }
+    .content .pricing-table-2-item .table-title {
       margin-top: 34px;
       padding: 26px 10px;
       font-size: 1.5rem;
       font-weight: 600; }
-    .pricing-table-2 .pricing-table-2-item .pricing-row {
+    .content .pricing-table-2-item .pricing-row {
       padding: 15px 22px 5px 22px; }
-    .pricing-table-2 .pricing-table-2-item .pricing-table-footer {
+    .content .pricing-table-2-item .pricing-table-footer {
       margin: 25px 0; }
-      .pricing-table-2 .pricing-table-2-item .pricing-table-footer .order-button {
+      .content .pricing-table-2-item .pricing-table-footer .order-button {
         text-decoration: none;
         text-transform: uppercase;
         border-radius: 30px;
@@ -257,29 +299,352 @@ html {
         font-size: 14px;
         background-color: #b6c6c9;
         padding: 9px 17px; }
-      .pricing-table-2 .pricing-table-2-item .pricing-table-footer :hover {
-        background-color: #392b42e8; }
+      .content .pricing-table-2-item .pricing-table-footer :hover {
+        background-color: #00bcd4;
+        transition: 0.5s ease-in-out; }
+  .content .pricing-table-3 {
+    background-image: url(../images/pricing-table-cta1.webp);
+    background-size: cover; }
+    .content .pricing-table-3 .bg-img-colum-1 {
+      background-image: url(../images/pt1.webp);
+      background-size: cover; }
+    .content .pricing-table-3 .bg-img-colum-2 {
+      background-image: url(../images/pt3.webp);
+      background-size: cover; }
+    .content .pricing-table-3 .bg-img-colum-3 {
+      background-image: url(../images/pt2.webp);
+      background-size: cover; }
+    .content .pricing-table-3 .table-title {
+      font-weight: 400;
+      padding: 100px 24px;
+      letter-spacing: 1.8px;
+      max-width: 364px; }
+    .content .pricing-table-3 .pricing-cost-item1 {
+      color: #2196f7; }
+    .content .pricing-table-3 .pricing-cost-item2 {
+      color: #d74498; }
+    .content .pricing-table-3 .pricing-cost-item3 {
+      color: #32ad1e; }
+    .content .pricing-table-3 .ocean {
+      color: #2196f7;
+      border: 1px solid  #2196f7; }
+    .content .pricing-table-3 .ocean:hover {
+      background-color: #2196f7;
+      color: #fff;
+      transition: 0.5s ease-in-out; }
+    .content .pricing-table-3 .mountaints {
+      color: #d74498;
+      border: 1px solid #d74498; }
+    .content .pricing-table-3 .mountaints:hover {
+      background-color: #d74498;
+      color: #fff;
+      transition: 0.5s ease-in-out; }
+    .content .pricing-table-3 .forest {
+      color: #32ad1e;
+      border: 1px solid #32ad1e; }
+    .content .pricing-table-3 .forest:hover {
+      background-color: #32ad1e;
+      color: #fff;
+      transition: 0.5s ease-in-out; }
+    .content .pricing-table-3 .pricing-table-3-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 74px 0px 90px; }
+    .content .pricing-table-3 .price {
+      background-color: #fff;
+      padding: 17px 0px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      position: absolute;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      margin-top: -60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .content .pricing-table-3 .price .pricing-cost {
+        font-size: 2rem;
+        font-weight: 300; }
+      .content .pricing-table-3 .price .time {
+        color: #99a9b5;
+        font-size: 1rem; }
+    .content .pricing-table-3 .sub-title {
+      margin: auto; }
+      .content .pricing-table-3 .sub-title .sub-title-primary {
+        color: #949ca1;
+        font-family: "Source Sans Pro";
+        font-size: 24px; }
+      .content .pricing-table-3 .sub-title .sub-title-second {
+        font-size: 14px;
+        color: #99a9b5; }
+    .content .pricing-table-3 .table-footer {
+      padding: 72px 0px; }
+      .content .pricing-table-3 .table-footer .buy-button {
+        text-decoration: none;
+        font-size: 19px;
+        padding: 19px 34px; }
+  .content .pricing-table-3-item {
+    padding: 31px 0px;
+    max-width: 305px;
+    margin: auto;
+    margin-top: 66px;
+    text-align: center;
+    flex: 100%;
+    position: relative; }
+    .content .pricing-table-3-item .option {
+      background-color: #fff; }
+      .content .pricing-table-3-item .option .list-option {
+        list-style-type: none; }
+        .content .pricing-table-3-item .option .list-option li {
+          padding: 20px 0px; }
+        .content .pricing-table-3-item .option .list-option :nth-child(even) {
+          background-color: #f4f6f7; }
+  .content .ad-block {
+    background-color: #2c2e3d;
+    text-align: center;
+    display: flex;
+    flex-direction: column; }
+    .content .ad-block .icon-adblock {
+      margin: 94px 0 79px; }
+    .content .ad-block .ad-title {
+      color: #ececed;
+      font-size: 4rem;
+      font-weight: 400;
+      margin-bottom: 59px; }
+    .content .ad-block .desc {
+      color: #ececed;
+      font-size: 1.5rem;
+      text-align: justify;
+      padding: 0 39px; }
+    .content .ad-block .btn-submit {
+      border-radius: 25px;
+      border: 3px solid #2196f7;
+      padding: 18px 28px;
+      color: #2196f7;
+      font-weight: 400; }
 
-.space {
-  background-color: #2c2e3d;
-  display: flex;
-  justify-content: space-between;
-  padding: 45px 79px; }
-  .space .logo-brand {
-    font-size: 2.75rem;
-    font-weight: 700; }
-  .space .desc {
-    align-items: center;
-    padding-top: 18px;
-    font-size: 1.2rem; }
-  .space .btn-buy-now {
-    border: 2px solid #08a6bc;
-    border-radius: 30px;
-    padding: 0px 17px;
-    background-color: #2c2e3d; }
-    .space .btn-buy-now a {
+.footer-content {
+  background-color: #212331;
+  padding-top: 110px; }
+  .footer-content .widgets {
+    padding-bottom: 72px; }
+  .footer-content .widget-title {
+    padding: 74px 0 45px; }
+  .footer-content .dash-line {
+    border: 1px dashed #5f727f; }
+  .footer-content .list-item {
+    list-style-type: none; }
+  .footer-content .ul-padding li {
+    padding: 8px; }
+  .footer-content .text-feild {
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #394050;
+    background-color: #181828; }
+  .footer-content textarea, .footer-content input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #494a59;
+    font-weight: 400;
+    line-height: 25px;
+    padding-left: 18px;
+    padding-top: 14px; }
+  .footer-content .fa-caret-down {
+    transform: rotate(45deg) translate(0px, 5px);
+    color: #f50057;
+    margin-left: 10px; }
+  .footer-content .widget-info .logo-brand-footer {
+    display: flex;
+    font-size: 28px; }
+    .footer-content .widget-info .logo-brand-footer .brand-title {
+      display: flex;
+      flex-direction: column;
+      font-weight: 300; }
+  .footer-content .widget-info .about {
+    font-size: 1rem;
+    line-height: 25px;
+    padding-right: 12px;
+    text-align: justify; }
+  .footer-content .widget-useful-links .list-links-item li:nth-child(even) {
+    list-style-type: none; }
+  .footer-content .widget-email-us .btn-submit {
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #394050;
+    display: flex; }
+    .footer-content .widget-email-us .btn-submit a {
       text-decoration: none;
-      font-weight: 600; }
+      font-weight: 700;
+      margin: auto; }
+  .footer-content .widget-newletter .input-email {
+    height: 40px;
+    background-color: #181828;
+    border: 1px solid #394050; }
+  .footer-content .widget-newletter p {
+    padding-bottom: 45px; }
+  .footer-content .widget-projects-clients .container-project {
+    display: flex; }
+    .footer-content .widget-projects-clients .container-project .project {
+      width: 80px;
+      height: 80px;
+      background-color: #b6c6c9;
+      margin: 8px; }
+  .footer-content .widget-projects-clients .group-position {
+    margin-left: 92px; }
+    .footer-content .widget-projects-clients .group-position .dot {
+      display: inline-block;
+      height: 13px;
+      width: 13px;
+      border-radius: 50%;
+      background-color: #99a9b5;
+      margin: 9px; }
+  .footer-content .widget-flickr-feed .row-feed-item {
+    display: flex; }
+    .footer-content .widget-flickr-feed .row-feed-item .item {
+      height: 80px;
+      width: 80px;
+      background-color: #99a9b5;
+      margin: 8px; }
+  .footer-content .post-item {
+    display: flex; }
+    .footer-content .post-item .avt {
+      height: 70px;
+      width: 70px;
+      background-color: #fff;
+      border-radius: 50%; }
+    .footer-content .post-item .post-info {
+      margin-left: 8px; }
+      .footer-content .post-item .post-info .post-title {
+        font-weight: 400;
+        line-height: normal; }
+      .footer-content .post-item .post-info .info {
+        display: flex;
+        justify-content: space-between; }
+        .footer-content .post-item .post-info .info .date-upload, .footer-content .post-item .post-info .info .fa-comments {
+          color: #00bcd4; }
+  .footer-content .footer-menu-social {
+    background-color: #181828;
+    font-size: 0.875rem; }
+    .footer-content .footer-menu-social .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 0; }
+    .footer-content .footer-menu-social ul {
+      list-style-type: none; }
+    .footer-content .footer-menu-social .list-menu-item {
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center; }
+      .footer-content .footer-menu-social .list-menu-item li {
+        margin: 5px 0; }
+        .footer-content .footer-menu-social .list-menu-item li a {
+          color: #99a9b5;
+          padding: 0 21px;
+          text-decoration: none;
+          border-right: 1px solid #99a9b5; }
+    .footer-content .footer-menu-social .list-social-item {
+      display: flex; }
+      .footer-content .footer-menu-social .list-social-item li {
+        padding: 12px; }
+        .footer-content .footer-menu-social .list-social-item li:hover {
+          color: #fff;
+          transition: 0.5s ease-in-out; }
 
-.pricing-table-3 {
-  background-image: url(../images/pricing-table-cta1.webp); }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .header-menu .logo-main-menu {
+      margin: auto; }
+      .header-menu .logo-main-menu .menu-icon {
+        display: none; }
+    .header-menu .nav-menu .menu-responsive, .header-menu .nav-menu .menu-responsive.responsive {
+      display: flex; }
+    .header-menu .nav-menu .menu-responsive li {
+      padding: 12px; }
+      .header-menu .nav-menu .menu-responsive li a {
+        color: white;
+        font-size: 0.8rem;
+        padding: 4px 7px; }
+    .header-menu .nav-menu .active {
+      border: 2px solid white; }
+  .big-title {
+    display: inline-block; }
+  .footer-content .logo-brand {
+    padding: 0 21px; }
+  .footer-content .widgets {
+    display: flex;
+    flex-wrap: wrap; }
+    .footer-content .widgets .col-3 {
+      flex: 50%;
+      position: relative;
+      padding: 0 21px; }
+      .footer-content .widgets .col-3 .widget-title {
+        padding: 74px 0 45px; } }
+
+@media (min-width: 1025px) and (max-width: 2560px) {
+  .menu-icon {
+    display: none; }
+  .big-title {
+    display: inline-block; }
+  .header-menu {
+    display: flex;
+    justify-content: space-between; }
+  .nav-menu {
+    align-items: center; }
+    .nav-menu .menu-responsive, .nav-menu .menu-responsive.responsive {
+      display: flex; }
+    .nav-menu .menu-responsive li {
+      padding: 12px; }
+      .nav-menu .menu-responsive li a {
+        color: white;
+        font-size: 0.8rem;
+        padding: 4px 7px; }
+      .nav-menu .menu-responsive li :hover {
+        color: #08a6bc; }
+    .nav-menu .active {
+      border: 2px solid white; }
+  .desc {
+    font-size: 0.875rem; }
+  .footer-content {
+    font-size: 00.875rem; }
+    .footer-content .title-flex {
+      padding: 29px 0 45px; }
+    .footer-content .padding-top {
+      padding-top: 105px; }
+    .footer-content .widgets {
+      display: flex;
+      justify-content: space-between; }
+      .footer-content .widgets .col-3 {
+        max-width: 263px; }
+      .footer-content .widgets .top {
+        padding-top: 84px; }
+      .footer-content .widgets .post-item {
+        display: flex;
+        font-size: 00.875rem; }
+        .footer-content .widgets .post-item .avt {
+          height: 50px;
+          width: 50px; }
+      .footer-content .widgets .container-project .project {
+        width: 60px;
+        height: 60px;
+        margin: 5px; }
+      .footer-content .widgets .group-position {
+        margin-left: 57px; }
+      .footer-content .widgets .widget-flickr-feed .row-feed-item .item {
+        height: 60px;
+        width: 60px;
+        margin: 5px; }
+    .footer-content .footer-menu-social .container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row; } }

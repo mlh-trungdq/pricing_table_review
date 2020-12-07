@@ -1,0 +1,81 @@
+@media (min-width: 1025px) and (max-width: 2560px) {
+  
+    .menu-icon {
+        display: none;
+    }
+    .big-title {
+        display: inline-block;
+    }
+    .header-menu {
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-menu {
+        align-items: center;
+        .menu-responsive, .menu-responsive.responsive {
+            display: flex;
+        }
+        .menu-responsive li {
+            padding: 12px;
+            a{ color: white;
+                font-size: 0.8rem;
+                padding: 4px 7px;
+            }
+            :hover {
+                color: #08a6bc;
+            }
+        }
+        .active {
+            border: 2px solid white;
+        }
+    }
+    .desc {
+        font-size: 0.875rem;
+    }
+    .footer-content {
+        font-size: 00.875rem;
+        .title-flex {
+            padding: 29px 0 45px;
+        }
+        .padding-top {
+            padding-top: 105px;
+        }
+        .widgets {
+            display: flex;
+            justify-content: space-between;
+                .col-3 {
+                    max-width: 263px;
+                }
+            .top {
+                padding-top: 84px;
+            }
+            .post-item {
+                display: flex;
+                font-size: 00.875rem;
+                .avt {
+                  height: 50px;
+                  width: 50px;
+                }
+            }
+            .container-project .project {
+                width: 60px;
+                height: 60px;
+                margin: 5px;
+              }
+            .group-position {
+                margin-left: 57px;
+            }
+            .widget-flickr-feed .row-feed-item .item {
+                height: 60px;
+                width: 60px;
+                margin: 5px;
+            }
+        }
+        .footer-menu-social .container {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+        
+    }
+}

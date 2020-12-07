@@ -1,0 +1,55 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    //header menu style
+    .header-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .logo-main-menu {
+            margin: auto;
+            .menu-icon {
+                display: none;
+            }
+        }
+        .nav-menu {
+            .menu-responsive, .menu-responsive.responsive {
+                display: flex;
+            }
+            .menu-responsive li {
+                padding: 12px;
+                a {
+                    color: white;
+                    font-size: 0.8rem;
+                    padding: 4px 7px;
+                }
+            }
+            .active {
+                border: 2px solid white;
+            }
+        }
+    }
+
+     //slider style   
+    .big-title {
+        display: inline-block;
+    }
+    
+    //footer style
+    .footer-content {
+        .logo-brand {
+            padding: 0 21px;
+         }
+        .widgets {
+        display: flex;
+        flex-wrap: wrap;
+        .col-3 {
+            flex: 50%;
+            position: relative;
+            padding: 0 21px;
+            .widget-title {
+                padding: 74px 0 45px;
+                }
+            }
+        }
+    }
+}

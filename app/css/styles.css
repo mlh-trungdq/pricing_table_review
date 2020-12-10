@@ -5,7 +5,7 @@ html {
   box-sizing: inherit;
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: "Source Sans Pro", sans-serif; }
 
 .bold {
   font-weight: bold; }
@@ -47,7 +47,14 @@ html {
   padding: 0 21px; }
 
 .text-big-title {
-  padding-bottom: 59px; }
+  padding-bottom: 59px;
+  font-weight: 200; }
+
+.font {
+  font-family: "Montserrat", sans-serif; }
+
+.font-size {
+  font-size: 0.875rem; }
 
 .logo-main-menu {
   display: flex;
@@ -55,6 +62,10 @@ html {
   padding: 24px 0px; }
   .logo-main-menu .logo-site {
     text-align: center; }
+    .logo-main-menu .logo-site .logo-site-title {
+      font-size: 1.6875rem;
+      font-weight: 700;
+      line-height: 50px; }
     .logo-main-menu .logo-site a {
       text-decoration: none; }
   .logo-main-menu .menu-icon i {
@@ -66,11 +77,12 @@ html {
     list-style: none;
     text-align: center;
     display: none; }
-    .nav-menu .menu-responsive a {
+    .nav-menu .menu-responsive li a {
       text-decoration: none;
       text-transform: uppercase;
-      color: #4e4e4e;
-      padding: 16px; }
+      color: #99a9b5;
+      padding: 16px;
+      font-family: "Montserrat"; }
 
 .menu-responsive.responsive {
   display: block; }
@@ -85,25 +97,29 @@ html {
   text-align: center; }
   .slider .slider-content {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
     .slider .slider-content .big-title {
-      letter-spacing: 0.3rem;
       font-size: 3rem;
-      margin: auto;
+      letter-spacing: 3.5px;
       text-align: center; }
+      .slider .slider-content .big-title h3 {
+        font-family: "Montserrat", sans-serif; }
     .slider .slider-content .slide-icon {
       margin: 181px 0px; }
     .slider .slider-content .small-title {
-      margin: auto;
       font-size: 1.5rem;
+      font-family: "Montserrat - Ultra Light";
       padding-bottom: 106px;
-      max-width: 990px; }
+      line-height: 37px;
+      font-weight: 300; }
     .slider .slider-content .dot {
       cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 149px 12px 45px;
-      border: 2px solid #ffffff;
+      height: 26px;
+      width: 26px;
+      margin: 147px 12px 45px;
+      border: 3px solid #ffffff;
       border-radius: 50%;
       background-color: #08a6bc;
       display: inline-block;
@@ -123,24 +139,30 @@ html {
       .slider .slider-content .cta:hover {
         border-color: #08a6bc; }
     .slider .slider-content a {
-      text-decoration: none; }
+      text-decoration: none;
+      font-weight: 700;
+      font-family: "Montserrat", sans-serif; }
     .slider .slider-content .cta:hover .child {
       color: #00bcd4; }
 
 .content {
-  margin-top: 142px; }
+  margin-top: 140px; }
   .content .dark-title {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
     .content .dark-title .content-big-title {
-      font-size: 3.125rem;
-      margin: auto;
+      color: #3c3950;
+      font-size: 3.74rem;
+      letter-spacing: 2.5px;
       text-align: center; }
     .content .dark-title .content-description {
-      margin-top: 78px;
-      color: #aab3b9;
+      margin-top: 77px;
+      color: #5f727f;
       font-size: 1rem;
-      text-align: center; }
+      line-height: 25px;
+      font-weight: 400; }
   .content .pricing-table-1 {
     display: flex;
     flex-wrap: wrap;
@@ -148,19 +170,40 @@ html {
     align-items: center; }
     .content .pricing-table-1 .pricing-price {
       background-color: #b0de79;
-      color: #ffffff; }
+      color: #ffffff;
+      padding: 35px 10px; }
       .content .pricing-table-1 .pricing-price .pricing-cost {
-        font-size: 65px;
-        font-weight: 400; }
+        font-family: "Montserrat", sans-serif;
+        font-size: 4.0625rem;
+        font-weight: 300;
+        letter-spacing: 3.25px; }
+      .content .pricing-table-1 .pricing-price .time {
+        font-weight: 400;
+        line-height: 25px; }
   .content .pricing-table-1-item {
     max-width: 271px;
     border: 1px solid #dfe5e8;
     text-align: center;
-    margin-top: 62px;
-    background-color: #d3d6d8;
+    margin-top: 156px;
+    background-color: #f0f3f2;
     justify-content: center;
     flex: 100%;
-    color: #5f727f; }
+    color: #5f727f;
+    position: relative; }
+    .content .pricing-table-1-item .new-sticker {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: #2c2e3d;
+      position: absolute;
+      margin-left: 10%;
+      margin-top: -25px;
+      transition: 0.5s ease-in-out;
+      z-index: 1; }
     .content .pricing-table-1-item .title-master {
       background-color: #ffffff;
       padding-top: 33px;
@@ -170,10 +213,13 @@ html {
         font-size: 24px; }
     .content .pricing-table-1-item .table-title {
       text-transform: uppercase;
-      font-weight: 300;
+      font-weight: 400;
+      font-family: "Montserrat", sans-serif;
       color: #5f727f;
-      font-size: 24px;
-      padding: 33px 0;
+      font-size: 1.5rem;
+      line-height: 50px;
+      letter-spacing: 1.2px;
+      padding: 15px 0;
       transition: 0.5s ease-in-out; }
     .content .pricing-table-1-item .bg-pricing-2 {
       background-color: #7ee0bf; }
@@ -182,14 +228,33 @@ html {
     .content .pricing-table-1-item .bg-pricing-4 {
       background-color: #a289e8; }
     .content .pricing-table-1-item .pricing-row {
+      font-family: "Source Sans Pro";
       border-bottom: 1px solid #dfe5e8;
-      padding: 21px 0; }
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 46px; }
+      .content .pricing-table-1-item .pricing-row .sub-title-primary {
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 37px;
+        letter-spacing: 1.2px;
+        padding: 17px 0 0; }
+      .content .pricing-table-1-item .pricing-row .sub-title-second {
+        font-size: 0.875rem;
+        line-height: 25px;
+        font-weight: 400;
+        padding-bottom: 13px; }
+    .content .pricing-table-1-item .pricing-row-title {
+      height: 93px;
+      border-bottom: 1px solid #dfe5e8; }
     .content .pricing-table-1-item .none-border-bottom {
       border-bottom: none; }
   .content .pricing-table-footer {
-    padding-bottom: 55px;
-    padding-top: 55px;
-    transition: padding-top 0.5s, padding-bottom 0.5s; }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 44px 0 25px; }
     .content .pricing-table-footer .order-button {
       cursor: pointer;
       text-decoration: none;
@@ -197,16 +262,20 @@ html {
       text-transform: uppercase;
       font-weight: 700;
       background-color: #393d50;
-      padding: 17px;
-      margin: 50px 0;
+      padding: 15px 24px;
       position: relative;
-      border-radius: 30px; }
+      border-radius: 20px;
+      font-family: "Montserrat", sans-serif; }
       .content .pricing-table-footer .order-button .fa-caret-down {
         transform: rotate(-90deg);
-        margin-right: 10px; }
+        margin-right: 12px; }
     .content .pricing-table-footer :hover {
       background-color: #83bce9;
       transition: 0.5s ease-in-out; }
+  .content .space {
+    height: 24px;
+    width: 100%;
+    transition: 0.5s ease-in-out; }
   .content .pricing-table-1-item:hover {
     background-color: #fff;
     border-bottom: none;
@@ -215,12 +284,16 @@ html {
       transform: translateY(-25px);
       border: 1px solid #dfe5e8;
       border-bottom: none; }
+    .content .pricing-table-1-item:hover .new-sticker {
+      transform: translateY(-25px); }
     .content .pricing-table-1-item:hover .pricing-table-footer {
       border: 1px solid #dfe5e8;
+      border-bottom: none;
       border-top: none; }
-      .content .pricing-table-1-item:hover .pricing-table-footer .space {
-        border: 1px solid #dfe5e8;
-        padding-bottom: 100px; }
+    .content .pricing-table-1-item:hover .space {
+      transform: translateY(25px);
+      border: 1px solid #dfe5e8;
+      border-top: none; }
   .content .pricing-table-2 {
     background-image: url(../images/bag.jpg);
     background-size: cover;
@@ -228,16 +301,16 @@ html {
     text-align: center; }
     .content .pricing-table-2 .aqua {
       background-color: #08a6bc;
-      border: 10px solid rgba(71, 94, 97, 0.9); }
+      border: 8px solid rgba(71, 94, 97, 0.9); }
     .content .pricing-table-2 .violet {
       background-color: #a637ec;
-      border: 10px solid rgba(104, 74, 122, 0.9); }
+      border: 8px solid rgba(104, 74, 122, 0.9); }
     .content .pricing-table-2 .hot-pink {
       background-color: #ee417c;
-      border: 10px solid rgba(161, 90, 114, 0.9); }
+      border: 8px solid rgba(161, 90, 114, 0.9); }
     .content .pricing-table-2 .orange {
       background-color: #ff994e;
-      border: 10px solid rgba(168, 126, 95, 0.9); }
+      border: 8px solid rgba(168, 126, 95, 0.9); }
     .content .pricing-table-2 .bg-title {
       background-color: #393d50; }
     .content .pricing-table-2 .section-title {
@@ -247,20 +320,24 @@ html {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 74px 0px 90px; }
+      padding: 87px 0px 90px; }
   .content .pricing-table-2-item {
     background-color: #2c2e3d;
-    padding: 31px 0px;
-    max-width: 229px;
+    padding-top: 42px;
+    max-width: 261px;
     margin: auto;
-    margin-top: 66px;
+    margin-top: 36px;
     text-align: center;
     flex: 100%;
     border-radius: 150px 150px 0 0;
     display: flex;
     flex-direction: column;
-    position: relative; }
+    position: relative;
+    transition: 0.5s ease-in-out; }
     .content .pricing-table-2-item .new-sticker {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 80px;
       width: 80px;
       border-radius: 40px;
@@ -269,11 +346,10 @@ html {
       margin-left: 50%;
       transform: translateX(-50%) translateY(-50%);
       text-align: center;
-      margin-top: -18px;
-      display: flex; }
+      margin-top: -18px; }
     .content .pricing-table-2-item .price {
-      width: 180px;
-      height: 180px;
+      width: 182px;
+      height: 182px;
       margin: auto;
       border-radius: 50%;
       display: flex;
@@ -281,27 +357,60 @@ html {
       justify-content: center;
       align-items: center; }
       .content .pricing-table-2-item .price .pricing-cost {
-        font-size: 2.625rem; }
+        font-size: 2.625rem;
+        font-weight: 200;
+        font-family: "Montserrat", sans-serif; }
     .content .pricing-table-2-item .table-title {
       margin-top: 34px;
       padding: 26px 10px;
       font-size: 1.5rem;
-      font-weight: 600; }
+      font-weight: 600;
+      font-family: "Montserrat", sans-serif; }
+    .content .pricing-table-2-item .medium {
+      padding: 7px 10px; }
+    .content .pricing-table-2-item .medium-sb {
+      padding-bottom: 2px; }
+    .content .pricing-table-2-item .pricing-row-bg-color {
+      background-color: #313445; }
+    .content .pricing-table-2-item .pricing-row-subtitle {
+      padding: 22px 0 18px; }
+      .content .pricing-table-2-item .pricing-row-subtitle .sub-title-primary {
+        color: #99a9b5;
+        font-size: 1.5rem;
+        font-weight: 300;
+        padding-bottom: 13px; }
+      .content .pricing-table-2-item .pricing-row-subtitle .sub-title-second {
+        font-size: 0.875rem;
+        color: #5f727f; }
+    .content .pricing-table-2-item .option {
+      padding-top: 26px; }
     .content .pricing-table-2-item .pricing-row {
       padding: 15px 22px 5px 22px; }
+      .content .pricing-table-2-item .pricing-row .sub-title-primary {
+        color: #99a9b5;
+        font-size: 1.5rem;
+        font-weight: 300;
+        padding-bottom: 13px; }
+      .content .pricing-table-2-item .pricing-row .sub-title-second {
+        font-size: 0.875rem;
+        color: #5f727f; }
     .content .pricing-table-2-item .pricing-table-footer {
-      margin: 25px 0; }
+      margin: 47px 0 51px; }
       .content .pricing-table-2-item .pricing-table-footer .order-button {
         text-decoration: none;
         text-transform: uppercase;
         border-radius: 30px;
         font-weight: 700;
-        font-size: 14px;
+        font-size: 0.875rem;
+        letter-spacing: 0.8px;
         background-color: #b6c6c9;
-        padding: 9px 17px; }
+        padding: 14px 18px 14px 20px; }
       .content .pricing-table-2-item .pricing-table-footer :hover {
         background-color: #00bcd4;
         transition: 0.5s ease-in-out; }
+    .content .pricing-table-2-item:hover {
+      cursor: pointer;
+      background-color: #393d50; }
   .content .pricing-table-3 {
     background-image: url(../images/pricing-table-cta1.webp);
     background-size: cover; }
@@ -315,9 +424,11 @@ html {
       background-image: url(../images/pt2.webp);
       background-size: cover; }
     .content .pricing-table-3 .table-title {
+      font-family: "Montserrat - Ultra Light", sans-serif;
+      font-size: 2.25rem;
       font-weight: 400;
-      padding: 100px 24px;
       letter-spacing: 1.8px;
+      padding: 100px 24px;
       max-width: 364px; }
     .content .pricing-table-3 .pricing-cost-item1 {
       color: #2196f7; }
@@ -333,10 +444,10 @@ html {
       color: #fff;
       transition: 0.5s ease-in-out; }
     .content .pricing-table-3 .mountaints {
-      color: #d74498;
-      border: 1px solid #d74498; }
+      color: #6c136f;
+      border: 1px solid #6c136f; }
     .content .pricing-table-3 .mountaints:hover {
-      background-color: #d74498;
+      background-color: #6c136f;
       color: #fff;
       transition: 0.5s ease-in-out; }
     .content .pricing-table-3 .forest {
@@ -369,62 +480,72 @@ html {
         font-size: 2rem;
         font-weight: 300; }
       .content .pricing-table-3 .price .time {
+        font-weight: 400;
         color: #99a9b5;
         font-size: 1rem; }
     .content .pricing-table-3 .sub-title {
-      margin: auto; }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 24px 48px; }
       .content .pricing-table-3 .sub-title .sub-title-primary {
-        color: #949ca1;
-        font-family: "Source Sans Pro";
-        font-size: 24px; }
+        font-size: 1.5rem;
+        font-weight: 300;
+        padding-bottom: 10px; }
       .content .pricing-table-3 .sub-title .sub-title-second {
-        font-size: 14px;
+        font-size: 0.8125rem;
         color: #99a9b5; }
     .content .pricing-table-3 .table-footer {
       padding: 72px 0px; }
       .content .pricing-table-3 .table-footer .buy-button {
         text-decoration: none;
-        font-size: 19px;
+        font-size: 1.1875rem;
         padding: 19px 34px; }
   .content .pricing-table-3-item {
     padding: 31px 0px;
-    max-width: 305px;
+    max-width: 364px;
     margin: auto;
     margin-top: 66px;
     text-align: center;
     flex: 100%;
     position: relative; }
     .content .pricing-table-3-item .option {
-      background-color: #fff; }
+      background-color: #fff;
+      color: #5f727f; }
       .content .pricing-table-3-item .option .list-option {
-        list-style-type: none; }
+        list-style-type: none;
+        font-weight: 400; }
         .content .pricing-table-3-item .option .list-option li {
           padding: 20px 0px; }
-        .content .pricing-table-3-item .option .list-option :nth-child(even) {
+        .content .pricing-table-3-item .option .list-option :nth-child(2n+1) {
           background-color: #f4f6f7; }
   .content .ad-block {
     background-color: #2c2e3d;
     text-align: center;
     display: flex;
-    flex-direction: column; }
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ececed; }
     .content .ad-block .icon-adblock {
-      margin: 94px 0 79px; }
+      margin: 220px 0 76px; }
     .content .ad-block .ad-title {
-      color: #ececed;
-      font-size: 4rem;
-      font-weight: 400;
-      margin-bottom: 59px; }
+      font-size: 5.25rem;
+      font-weight: 200;
+      margin-bottom: 100px; }
     .content .ad-block .desc {
-      color: #ececed;
       font-size: 1.5rem;
       text-align: justify;
-      padding: 0 39px; }
+      padding: 0 92px;
+      font-weight: 300; }
     .content .ad-block .btn-submit {
+      font-size: 1.1875rem;
       border-radius: 25px;
       border: 3px solid #2196f7;
       padding: 18px 28px;
       color: #2196f7;
-      font-weight: 400; }
+      font-weight: 700; }
 
 .footer-content {
   background-color: #212331;
@@ -484,6 +605,8 @@ html {
     height: 40px;
     background-color: #181828;
     border: 1px solid #394050; }
+  .footer-content .widget-newletter ul li > button {
+    background-color: red; }
   .footer-content .widget-newletter p {
     padding-bottom: 45px; }
   .footer-content .widget-projects-clients .container-project {
@@ -550,13 +673,12 @@ html {
           padding: 0 21px;
           text-decoration: none;
           border-right: 1px solid #99a9b5; }
+    .footer-content .footer-menu-social .flex-li {
+      display: flex; }
     .footer-content .footer-menu-social .list-social-item {
       display: flex; }
       .footer-content .footer-menu-social .list-social-item li {
         padding: 12px; }
-        .footer-content .footer-menu-social .list-social-item li:hover {
-          color: #fff;
-          transition: 0.5s ease-in-out; }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .header-menu {

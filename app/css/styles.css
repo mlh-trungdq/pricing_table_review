@@ -56,6 +56,58 @@ html {
 .font-size {
   font-size: 0.875rem; }
 
+.scroll-top-button {
+  display: none;
+  cursor: pointer;
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 73px;
+  right: 0px;
+  border-radius: 3px;
+  background-color: #06060f;
+  opacity: 0.4;
+  border: none;
+  z-index: 99; }
+  .scroll-top-button a {
+    color: #99a9b5;
+    font-family: "Material Icons";
+    font-size: 24px;
+    text-decoration: none; }
+    .scroll-top-button a .fa-chevron-right {
+      transform: rotate(-90deg);
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+  .scroll-top-button:hover {
+    background-color: #555; }
+
+.header {
+  transition: 0.5s ease-in-out; }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 0.5s ease-in-out;
+  border-bottom: 1px solid #d9dadb; }
+  .sticky .logo-main-menu {
+    padding: 5px 0 0; }
+    .sticky .logo-main-menu .logo-site .logo-site-title {
+      color: #3c3950;
+      font-size: 1.25rem; }
+    .sticky .logo-main-menu .menu-icon {
+      color: #3c3950;
+      font-size: 1.25rem;
+      padding-top: 7px; }
+  .sticky .nav-menu .menu-responsive a {
+    color: #3c3950; }
+  .sticky .nav-menu .menu-responsive .active {
+    border: 2px solid #3c3950; }
+
 .logo-main-menu {
   display: flex;
   justify-content: space-between;
@@ -68,8 +120,10 @@ html {
       line-height: 50px; }
     .logo-main-menu .logo-site a {
       text-decoration: none; }
-  .logo-main-menu .menu-icon i {
-    padding-top: 7px; }
+  .logo-main-menu .menu-icon {
+    font-size: 1.75rem; }
+    .logo-main-menu .menu-icon i {
+      padding-top: 9px; }
 
 .nav-menu {
   align-self: center; }
@@ -82,7 +136,8 @@ html {
       text-transform: uppercase;
       color: #99a9b5;
       padding: 16px;
-      font-family: "Montserrat"; }
+      font-family: "Montserrat";
+      font-size: 20px; }
 
 .menu-responsive.responsive {
   display: block; }
@@ -428,8 +483,7 @@ html {
       font-size: 2.25rem;
       font-weight: 400;
       letter-spacing: 1.8px;
-      padding: 100px 24px;
-      max-width: 364px; }
+      padding: 100px 0px; }
     .content .pricing-table-3 .pricing-cost-item1 {
       color: #2196f7; }
     .content .pricing-table-3 .pricing-cost-item2 {
@@ -504,7 +558,7 @@ html {
         padding: 19px 34px; }
   .content .pricing-table-3-item {
     padding: 31px 0px;
-    max-width: 364px;
+    max-width: 261px;
     margin: auto;
     margin-top: 66px;
     text-align: center;
@@ -680,7 +734,15 @@ html {
       .footer-content .footer-menu-social .list-social-item li {
         padding: 12px; }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 863px) and (max-width: 1024px) {
+  .scroll-top-button {
+    right: 24px; }
+  .sticky .header-menu .logo-main-menu {
+    display: none; }
+  .sticky .header-menu .nav-menu .menu-responsive a {
+    color: #3c3950; }
+  .sticky .header-menu .nav-menu .menu-responsive .active {
+    border: 2px solid #3c3950; }
   .header-menu {
     display: flex;
     flex-direction: column;
@@ -689,16 +751,16 @@ html {
       margin: auto; }
       .header-menu .logo-main-menu .menu-icon {
         display: none; }
-    .header-menu .nav-menu .menu-responsive, .header-menu .nav-menu .menu-responsive.responsive {
+    .header-menu .nav-menu .menu-responsive {
       display: flex; }
-    .header-menu .nav-menu .menu-responsive li {
-      padding: 12px; }
-      .header-menu .nav-menu .menu-responsive li a {
-        color: white;
-        font-size: 0.8rem;
-        padding: 4px 7px; }
-    .header-menu .nav-menu .active {
-      border: 2px solid white; }
+      .header-menu .nav-menu .menu-responsive li {
+        padding: 12px; }
+        .header-menu .nav-menu .menu-responsive li a {
+          color: white;
+          font-size: 0.875rem;
+          padding: 4px 7px; }
+      .header-menu .nav-menu .menu-responsive .active {
+        border: 2px solid white; }
   .big-title {
     display: inline-block; }
   .footer-content .logo-brand {
@@ -714,6 +776,8 @@ html {
         padding: 74px 0 45px; } }
 
 @media (min-width: 1025px) and (max-width: 2560px) {
+  .scroll-top-button {
+    right: 46px; }
   .menu-icon {
     display: none; }
   .big-title {
@@ -729,7 +793,7 @@ html {
       padding: 12px; }
       .nav-menu .menu-responsive li a {
         color: white;
-        font-size: 0.8rem;
+        font-size: 0.875rem;
         padding: 4px 7px; }
       .nav-menu .menu-responsive li :hover {
         color: #08a6bc; }

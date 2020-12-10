@@ -58,7 +58,71 @@
     font-size: 0.875rem;
   }
 
+  .scroll-top-button {
+    display: none;
+    cursor: pointer;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 73px;
+    right: 0px;
+    border-radius: 3px;
+    background-color: #06060f;
+    opacity: 0.4;
+    border: none;
+    z-index: 99;
+    a {
+      color: #99a9b5;
+      font-family: "Material Icons";
+      font-size: 24px;
+      text-decoration: none;
+      .fa-chevron-right {
+        transform: rotate(-90deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    &:hover {
+      background-color: #555;
+    }
+  }
+  
   //header - menu style
+  .header {
+    transition: 0.5s ease-in-out;
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: 0.5s ease-in-out;
+    border-bottom: 1px solid #d9dadb;
+    .logo-main-menu {
+      padding: 5px 0 0;
+      .logo-site .logo-site-title {
+          color: #3c3950;
+          font-size: 1.25rem;
+        }
+      .menu-icon {
+        color: #3c3950;
+        font-size: 1.25rem;
+        padding-top: 7px;
+      }
+    }
+    .nav-menu .menu-responsive {
+      a{
+        color: #3c3950;
+      }
+      .active {
+        border: 2px solid #3c3950;
+      }
+    } 
+    
+  }
   .logo-main-menu {
     display: flex;
     justify-content: space-between;
@@ -74,9 +138,12 @@
         text-decoration: none;
       }
     }
-    .menu-icon i{
-      padding-top: 7px;
-    }
+    .menu-icon {
+      font-size: 1.75rem;
+      i{
+        padding-top: 9px;
+      }
+    } 
   }
   .nav-menu {
     align-self: center;
@@ -90,6 +157,7 @@
         color: #99a9b5;
         padding: 16px;
         font-family: "Montserrat";
+        font-size: 20px;
       }
     }
   }
@@ -522,8 +590,7 @@
       font-size: 2.25rem;
       font-weight: 400;
       letter-spacing: 1.8px;
-      padding: 100px 24px;
-      max-width: 364px;
+      padding: 100px 0px;
     }
     .pricing-cost-item1 {
       color: #2196f7;
@@ -618,7 +685,7 @@
   }
   .pricing-table-3-item {
     padding: 31px 0px;
-    max-width: 364px;
+    max-width: 261px;
     margin: auto;
     margin-top: 66px;
     text-align: center;

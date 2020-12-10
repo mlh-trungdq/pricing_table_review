@@ -1,4 +1,12 @@
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 863px) and (max-width: 1024px) {
+  .scroll-top-button {
+    right: 24px; }
+  .sticky .header-menu .logo-main-menu {
+    display: none; }
+  .sticky .header-menu .nav-menu .menu-responsive a {
+    color: #3c3950; }
+  .sticky .header-menu .nav-menu .menu-responsive .active {
+    border: 2px solid #3c3950; }
   .header-menu {
     display: flex;
     flex-direction: column;
@@ -7,16 +15,16 @@
       margin: auto; }
       .header-menu .logo-main-menu .menu-icon {
         display: none; }
-    .header-menu .nav-menu .menu-responsive, .header-menu .nav-menu .menu-responsive.responsive {
+    .header-menu .nav-menu .menu-responsive {
       display: flex; }
-    .header-menu .nav-menu .menu-responsive li {
-      padding: 12px; }
-      .header-menu .nav-menu .menu-responsive li a {
-        color: white;
-        font-size: 0.8rem;
-        padding: 4px 7px; }
-    .header-menu .nav-menu .active {
-      border: 2px solid white; }
+      .header-menu .nav-menu .menu-responsive li {
+        padding: 12px; }
+        .header-menu .nav-menu .menu-responsive li a {
+          color: white;
+          font-size: 0.875rem;
+          padding: 4px 7px; }
+      .header-menu .nav-menu .menu-responsive .active {
+        border: 2px solid white; }
   .big-title {
     display: inline-block; }
   .footer-content .logo-brand {

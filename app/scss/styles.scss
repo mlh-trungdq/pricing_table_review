@@ -48,7 +48,6 @@
     padding: 0 21px;
   }
   .text-big-title {
-    padding-bottom: 59px;
     font-weight: 200;
   }
   .font {
@@ -176,6 +175,43 @@
   //slider style
   .slider {
     text-align: center;
+    position: relative;
+    .next, .prev {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 40px;
+      background-color: #212331;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      color: white;
+      font-size: 18px;
+      transition: 0.6s ease;
+      user-select: none;
+      &:hover {
+          background-color: #00bcd4;
+        }  
+    }
+    .slide-item {
+      display: none;
+    }
+    .next {
+      right: 0;
+    }
+    .prev {
+      left: 0;
+    }
+    
+    .slide-2 {
+      background-image: url('../images/slide-2.webp');
+      background-size: cover;
+    }
+    .slide-3 {
+      background-image: url('../images/Typography-01.jpg');
+      background-size: cover;
+    }
     .slider-content {
       display: flex;
       flex-direction: column;
@@ -195,34 +231,33 @@
       .small-title {
         font-size: 1.5rem;
         font-family: "Montserrat - Ultra Light";
-        padding-bottom: 106px;
+        // padding-bottom: 106px;
+        margin: 59px 0px 106px;
         line-height: 37px;
         font-weight: 300;
       }
-      .dot {
-        cursor: pointer;
-        height: 26px;
-        width: 26px;
-        margin: 147px 12px 45px;
-        border: 3px solid #ffffff;
-        border-radius: 50%;
-        background-color: #08a6bc;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-      }
+      
+      
       .cta-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        margin: 45px 0px 147px;
       }
       .cta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 228px;
+        height: 52px;
+        line-height: 54px;
         text-decoration: none;
-        border: 2px solid #ffffff;
-        border-radius: 20px;
-        padding: 9px 20px;
+        letter-spacing: 0.95px;
+        border: 3px solid #ffffff;
+        border-radius: 25px;
         margin: 6px 21px;
-        width: 192px;
+        transition: 0.5s ease;
         &:hover {
           border-color: #08a6bc;
         }
@@ -231,10 +266,43 @@
         text-decoration: none;
         font-weight: 700;
         font-family: "Montserrat", sans-serif;
+        transition: 0.5s ease;
       }
       .cta:hover .child {
         color: #00bcd4;
       }
+    }
+    .positon {
+      margin-top: -40px;
+      z-index: 100;
+    }
+    .dot {
+      cursor: pointer;
+      height: 26px;
+      width: 26px;
+      margin: 0px 12px 0px;
+      border: 3px solid #ffffff;
+      border-radius: 50%;
+      background-color: #08a6bc;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @-webkit-keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+    
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
     }
   }
 
@@ -293,18 +361,19 @@
       flex: 100%;
       color: #5f727f;
       position: relative;
+      transition: 0.5s ease-in-out;
       .new-sticker {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 14px;
+        font-size: 0.75rem;
         height: 50px;
         width: 50px;
         border-radius: 50%;
         background-color: #2c2e3d;
         position: absolute;
-        margin-left: 10%;
-        margin-top: -25px;
+        left: 10%;
+        top: -3.5%;
         transition: 0.5s ease-in-out;
         z-index: 1;
       }
@@ -374,18 +443,24 @@
       padding: 44px 0 25px;
       .order-button {
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 119px;
+        height: 40px;
         text-decoration: none;
         color: #ffffff;
         text-transform: uppercase;
+        letter-spacing: 0.8px;
         font-weight: 700;
         background-color: #393d50;
-        padding: 15px 24px;
+        line-height: 50px;
         position: relative;
         border-radius: 20px;
         font-family: "Montserrat", sans-serif;
         .fa-caret-down {
           transform: rotate(-90deg);
-          margin-right: 12px;
+          margin-right: 2px;
         }
       }
       :hover {
@@ -393,36 +468,15 @@
         transition: 0.5s ease-in-out;
       }
     }
-    .space {
-      height: 24px;
-      width: 100%;
-      transition: 0.5s ease-in-out;
-    }
     .pricing-table-1-item:hover {
       background-color: #fff;
-      border-bottom: none;
-      border-top: none; 
-      .table-title {
-        transform: translateY(-25px);
-        border: 1px solid #dfe5e8;
-        border-bottom: none;
-      }
-      .new-sticker {
-        transform: translateY(-25px);
-      }
-      .pricing-table-footer {
-        border: 1px solid #dfe5e8;
-        border-bottom: none;
-        border-top: none;
-      }
-      .space {
-        transform: translateY(25px);
-        border: 1px solid #dfe5e8;
-        border-top: none;
+      transform: scaleY(1.05);
+        .table-title {
+          transform: translateY(-12px);
       }
     }
-  // pricing table 2 style
-
+  
+    // pricing table 2 style
   .pricing-table-2 {
     background-image: url(../images/bag.jpg);
     background-size: cover;
@@ -481,7 +535,7 @@
       border-radius: 40px;
       background-color: #2c2e3d;
       position: absolute;
-      margin-left: 50%;
+      left: 50%;
       transform: translateX(-50%) translateY(-50%);
       text-align: center;
       margin-top: -18px;
@@ -548,19 +602,26 @@
     }
     .pricing-table-footer {
       margin: 47px 0 51px;
-      .order-button {
+      .ordernow-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 152px;
+        height: 42px;
+        font-family: "Montserrat";
         text-decoration: none;
         text-transform: uppercase;
-        border-radius: 30px;
+        border-radius: 20px;
         font-weight: 700;
-        font-size: 0.875rem;
         letter-spacing: 0.8px;
         background-color: #b6c6c9;
-        padding: 14px 18px 14px 20px;
+        transition: 0.5s ease-in-out;
+        font-size: 1rem;
+        line-height: 50px;
       }
       :hover {
-        background-color: #00bcd4;
-        transition: 0.5s ease-in-out;
+        background-color: #ffffff;
+        color: #3c3950;
       }
     }
     &:hover {
@@ -586,7 +647,7 @@
       background-size: cover;
     }
     .table-title {
-      font-family: "Montserrat - Ultra Light", sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-size: 2.25rem;
       font-weight: 400;
       letter-spacing: 1.8px;
@@ -636,12 +697,11 @@
     }
     .price {
       background-color: #fff;
-      padding: 17px 0px;
-      width: 120px;
-      height: 120px;
+      width: 122px;
+      height: 122px;
       border-radius: 50%;
       position: absolute;
-      margin-left: 50%;
+      left: 50%;
       transform: translateX(-50%);
       margin-top: -60px;
       display: flex;
@@ -685,7 +745,7 @@
   }
   .pricing-table-3-item {
     padding: 31px 0px;
-    max-width: 261px;
+    max-width: 364px;
     margin: auto;
     margin-top: 66px;
     text-align: center;
@@ -727,15 +787,21 @@
     .desc {
       font-size: 1.5rem;
       text-align: justify;
-      padding: 0 92px;
+      // padding: 0 92px;
       font-weight: 300;
     }
     .btn-submit {
+      width: 228px;
+      height: 52px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-size: 1.1875rem;
       border-radius: 25px;
       border: 3px solid #2196f7;
-      padding: 18px 28px;
+      line-height: 54px;
       color: #2196f7;
+      letter-spacing: 0.95px;
       font-weight: 700;
     }
   }
@@ -744,9 +810,13 @@
   //footer style
 .footer-content {
   background-color: #212331;
-  padding-top: 110px;
+  // padding-top: 70px;
   .widgets {
     padding-bottom: 72px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
   }
   .widget-title {
     padding: 74px 0 45px;
@@ -758,7 +828,7 @@
     list-style-type: none;
   } 
   .ul-padding li{
-    padding: 8px;
+    padding: 8px 0;
   }
   .text-feild {
     width: 100%;
@@ -822,6 +892,7 @@
       height: 40px;
       background-color: #181828;
       border: 1px solid #394050;
+      width: 85%;
     }
     ul li > button {
       background-color: red;
@@ -833,6 +904,8 @@
   .widget-projects-clients {
     .container-project {
       display: flex;
+      justify-content: center;
+      align-items: center;
       .project {
         width: 80px;
         height: 80px;
@@ -840,9 +913,15 @@
         margin: 8px;
       }
     }
+    .slide-client {
+      display: none;
+    }
     .group-position {
-      margin-left: 92px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       .dot {
+        cursor: pointer;
         display: inline-block;
         height: 13px;
         width: 13px;
@@ -850,11 +929,19 @@
         background-color: #99a9b5;
         margin: 9px;
       }
+      // .dot:hover {
+      //   background-color: lightcoral;
+      // }
+      .active {
+        background-color: lightcoral;
+      }
     }
   }
   .widget-flickr-feed {
     .row-feed-item {
       display: flex;
+      justify-content: center;
+      align-items: center;
       .item {
         height: 80px;
         width: 80px;
@@ -872,6 +959,9 @@
       border-radius: 50%;
     }
     .post-info {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
       margin-left: 8px;
       .post-title {
         font-weight: 400;
@@ -917,11 +1007,15 @@
     }
     .flex-li {
       display: flex;
+    //  .input-email {
+    //   width: 100%;
+    //  }
     }
     .list-social-item {
       display: flex;
       li {
         padding: 12px;
+       
       }
     }
   }

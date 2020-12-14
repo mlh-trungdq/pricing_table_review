@@ -32,6 +32,11 @@
             border: 2px solid white;
         }
     }
+    .slider .arrow-container .arrow-item {
+        font-size: 3rem;
+        height: 80px;
+        width: 80px;
+    }
     .desc {
         font-size: 0.875rem;
     }
@@ -45,10 +50,11 @@
         }
         .widgets {
             display: flex;
-            justify-content: space-between;
                 .col-3 {
-                    max-width: 263px;
+                    width: 100%;
+                    margin: 0 12px;
                 }
+                
             .top {
                 padding-top: 84px;
             }
@@ -64,10 +70,10 @@
                 width: 60px;
                 height: 60px;
                 margin: 5px;
-              }
-            .group-position {
-                margin-left: 57px;
             }
+            // .group-position {
+            //     margin-left: 57px;
+            // }
             .widget-flickr-feed .row-feed-item .item {
                 height: 60px;
                 width: 60px;

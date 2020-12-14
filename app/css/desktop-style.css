@@ -1,4 +1,6 @@
 @media (min-width: 1025px) and (max-width: 2560px) {
+  .scroll-top-button {
+    right: 46px; }
   .menu-icon {
     display: none; }
   .big-title {
@@ -14,7 +16,7 @@
       padding: 12px; }
       .nav-menu .menu-responsive li a {
         color: white;
-        font-size: 0.8rem;
+        font-size: 0.875rem;
         padding: 4px 7px; }
       .nav-menu .menu-responsive li :hover {
         color: #08a6bc; }

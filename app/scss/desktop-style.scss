@@ -37,47 +37,38 @@
         height: 80px;
         width: 80px;
     }
+    .slider-container {
+        .slider-item {
+        height: 959px;
+        }
+    }
     .desc {
         font-size: 0.875rem;
     }
     .footer-content {
         font-size: 00.875rem;
-        .title-flex {
-            padding: 29px 0 45px;
-        }
-        .padding-top {
-            padding-top: 105px;
-        }
         .widgets {
             display: flex;
                 .col-3 {
-                    width: 100%;
+                    width: 263px;
                     margin: 0 12px;
                 }
-                
-            .top {
-                padding-top: 84px;
-            }
             .post-item {
                 display: flex;
-                font-size: 00.875rem;
                 .avt {
-                  height: 50px;
-                  width: 50px;
+                  height: 70px;
+                  width: 70px;
                 }
             }
-            .container-project .project {
-                width: 60px;
-                height: 60px;
-                margin: 5px;
+            .widget-projects-clients .container-project {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 80px 80px;
             }
-            // .group-position {
-            //     margin-left: 57px;
-            // }
-            .widget-flickr-feed .row-feed-item .item {
-                height: 60px;
-                width: 60px;
-                margin: 5px;
+            .widget-flickr-feed .container-feeds {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 80px 80px 80px;
             }
         }
         .footer-menu-social .container {

@@ -150,7 +150,8 @@ html {
 .slider {
   text-align: center;
   position: relative; }
-  .slider .next, .slider .prev {
+  .slider .next,
+  .slider .prev {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,7 +165,8 @@ html {
     font-size: 18px;
     transition: 0.6s ease;
     user-select: none; }
-    .slider .next:hover, .slider .prev:hover {
+    .slider .next:hover,
+    .slider .prev:hover {
       background-color: #00bcd4; }
   .slider .slide-item {
     display: none; }
@@ -242,18 +244,20 @@ html {
 
 @-webkit-keyframes fade {
   from {
-    opacity: .4; }
+    opacity: 0.4; }
   to {
     opacity: 1; } }
 
 @keyframes fade {
   from {
-    opacity: .4; }
+    opacity: 0.4; }
   to {
     opacity: 1; } }
 
 .slider-container {
   position: relative; }
+  .slider-container .original-dots li button {
+    font-size: 0; }
   .slider-container .slick-arrow {
     display: flex;
     justify-content: center;
@@ -293,37 +297,35 @@ html {
     background-color: #08a6bc; }
   .slider-container .slider-item {
     height: 1291px; }
-  .slider-container .slider-item-1 {
+  .slider-container .slider-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-    .slider-container .slider-item-1 .big-title {
+    .slider-container .slider-item .big-title {
       font-size: 3rem;
       letter-spacing: 3.5px;
       text-align: center;
       margin: 112px 0px 66px; }
-      .slider-container .slider-item-1 .big-title h3 {
+      .slider-container .slider-item .big-title h3 {
         font-family: "Montserrat", sans-serif; }
-    .slider-container .slider-item-1 .slide-icon {
-      margin-top: 172px;
+    .slider-container .slider-item .slide-icon {
       display: block;
       height: auto;
       width: 100%; }
-    .slider-container .slider-item-1 .small-title {
+    .slider-container .slider-item .small-title {
       font-size: 1.5rem;
       text-align: center;
       font-family: "Montserrat - Ultra Light";
       line-height: 37px;
       font-weight: 300;
       margin-bottom: 79px; }
-    .slider-container .slider-item-1 .cta-container {
+    .slider-container .slider-item .cta-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
-      margin-bottom: 147px; }
-    .slider-container .slider-item-1 .cta {
+      align-items: center; }
+    .slider-container .slider-item .cta {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -336,19 +338,19 @@ html {
       border-radius: 25px;
       margin: 6px 21px;
       transition: 0.5s ease; }
-      .slider-container .slider-item-1 .cta:hover {
+      .slider-container .slider-item .cta:hover {
         border-color: #08a6bc; }
-    .slider-container .slider-item-1 a {
+    .slider-container .slider-item a {
       text-decoration: none;
       font-weight: 700;
       font-family: "Montserrat", sans-serif;
       transition: 0.5s ease; }
-    .slider-container .slider-item-1 .cta:hover .child {
+    .slider-container .slider-item .cta:hover .child {
       color: #00bcd4; }
-  .slider-container .slider-item-2 {
+  .slider-container .bg-2 {
     background-image: url("../images/Typography-01.jpg");
     background-size: cover; }
-  .slider-container .slider-item-3 {
+  .slider-container .bg-3 {
     background-image: url("../images/slide-2.webp");
     background-size: cover; }
 
@@ -662,7 +664,7 @@ html {
       color: #32ad1e; }
     .content .pricing-table-3 .ocean {
       color: #2196f7;
-      border: 1px solid  #2196f7; }
+      border: 1px solid #2196f7; }
     .content .pricing-table-3 .ocean:hover {
       background-color: #2196f7;
       color: #fff;
@@ -741,7 +743,7 @@ html {
         font-weight: 400; }
         .content .pricing-table-3-item .option .list-option li {
           padding: 20px 0px; }
-        .content .pricing-table-3-item .option .list-option :nth-child(2n+1) {
+        .content .pricing-table-3-item .option .list-option :nth-child(2n + 1) {
           background-color: #f4f6f7; }
   .content .ad-block {
     background-color: #2c2e3d;
@@ -793,7 +795,8 @@ html {
     border-radius: 3px;
     border: 1px solid #394050;
     background-color: #181828; }
-  .footer-content textarea, .footer-content input::-webkit-input-placeholder {
+  .footer-content textarea,
+  .footer-content input::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     color: #494a59;
     font-weight: 400;
@@ -838,7 +841,8 @@ html {
       .footer-content .widget-recent-posts .post-item .post-info .info {
         display: flex;
         justify-content: space-between; }
-        .footer-content .widget-recent-posts .post-item .post-info .info .date-upload, .footer-content .widget-recent-posts .post-item .post-info .info .fa-comments {
+        .footer-content .widget-recent-posts .post-item .post-info .info .date-upload,
+        .footer-content .widget-recent-posts .post-item .post-info .info .fa-comments {
           color: #00bcd4; }
   .footer-content .widget-useful-links .list-links-item li:nth-child(even) {
     list-style-type: none;

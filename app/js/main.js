@@ -51,47 +51,72 @@
 });
 
 //slide show 
-var slideIndex = 1;
-showSlides(slideIndex);
+// var slideIndex = 1;
+// showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+// // Next/previous controls
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+// // Thumbnail image controls
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("slide-item");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+// function showSlides(n) {
+//   var i;
+//   var slides = document.getElementsByClassName("slide-item");
+//   var dots = document.getElementsByClassName("dot");
+//   if (n > slides.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//       slides[i].style.display = "none";
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//       dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex-1].style.display = "block";
+//   dots[slideIndex-1].className += " active";
+// }
 
-var myIndex = 0;
-carousel();
+// var myIndex = 0;
+// carousel();
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("slide-item");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
-}
+// function carousel() {
+//   var i;
+//   var x = document.getElementsByClassName("slide-item");
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = "none";  
+//   }
+//   myIndex++;
+//   if (myIndex > x.length) {myIndex = 1}    
+//   x[myIndex-1].style.display = "block";  
+//   setTimeout(carousel, 2000); // Change image every 2 seconds
+// }
 
+
+      $(document).ready(function(){
+        $('.slider-container').not('.slick-initialized').slick({
+          autoplay: true,
+          autoplaySpeed: 2000,
+          adaptiveHeight: true,
+          arrows: true,
+          prevArrow: '<span class="prev-arrow">&#8592;</span>',
+          nextArrow: '<span class="next-arrow">&#8594;</span>',
+          dotsClass: 'original-dots',
+          dots: true,
+          // dots: true,
+          // appendDots: $('.dots'),
+        });
+        // $('.container-project').not('.slick-initialized').slick({
+        //   autoplay: true,
+        //   arrows: false,
+        //   autoplaySpeed: 2000,
+        //   swipeToSlide: false,
+        //   slidesToScroll: 6,
+        //   slidesToShow: 6,
+        // });
+      });
+
+      

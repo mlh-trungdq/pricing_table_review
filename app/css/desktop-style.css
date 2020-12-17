@@ -26,35 +26,30 @@
     font-size: 3rem;
     height: 80px;
     width: 80px; }
+  .slider-container .slider-item {
+    height: 959px; }
   .desc {
     font-size: 0.875rem; }
   .footer-content {
     font-size: 00.875rem; }
-    .footer-content .title-flex {
-      padding: 29px 0 45px; }
-    .footer-content .padding-top {
-      padding-top: 105px; }
     .footer-content .widgets {
       display: flex; }
       .footer-content .widgets .col-3 {
-        width: 100%;
+        width: 263px;
         margin: 0 12px; }
-      .footer-content .widgets .top {
-        padding-top: 84px; }
       .footer-content .widgets .post-item {
-        display: flex;
-        font-size: 00.875rem; }
+        display: flex; }
         .footer-content .widgets .post-item .avt {
-          height: 50px;
-          width: 50px; }
-      .footer-content .widgets .container-project .project {
-        width: 60px;
-        height: 60px;
-        margin: 5px; }
-      .footer-content .widgets .widget-flickr-feed .row-feed-item .item {
-        height: 60px;
-        width: 60px;
-        margin: 5px; }
+          height: 70px;
+          width: 70px; }
+      .footer-content .widgets .widget-projects-clients .container-project {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 80px 80px; }
+      .footer-content .widgets .widget-flickr-feed .container-feeds {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 80px 80px 80px; }
     .footer-content .footer-menu-social .container {
       display: flex;
       justify-content: space-between;

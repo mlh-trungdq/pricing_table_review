@@ -12,9 +12,12 @@
           integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" 
           crossorigin="anonymous"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" href="/css/print.css">
   <link rel="stylesheet" href="/css/styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
   <!--endbuild-->
 </head>
   <body>
@@ -52,10 +55,10 @@
             </nav>
         </div>
     </header>
-    <div class="slider color-white">
-            <div class="slide-item bg-color slide-1">
-                <section class="slider-content">
-                    <span><img src="./images/icon-slider.png" class="slide-icon"></span>
+    <section>
+        <div class="slider-container">
+            <div class="slider-item slider-item-1 bg-color color-white">
+                <span><img src="./images/icon-slider.png" class="slide-icon"></span>
                     <div class="big-title">
                         <h3 class="text-big-title">PRICING <span class="bold">TABLES 1</span></h3>
                     </div>
@@ -66,50 +69,15 @@
                         <div class="cta bg-color"><a href="index.html" class="child color-white">PURCHASE NOW</a></div>
                         <div class="cta bg-color"><a href="#" class=" child color-white">MORE DETAILS</a></div>
                     </div>
-                </section>
             </div>
-            <div class="slide-item slide-2">
-                <section class="slider-content">
-                    <span><img src="./images/icon-slider.png" class="slide-icon"></span>
-                    <div class="big-title">
-                        <h3 class="text-big-title">PRICING <span class="bold">TABLES 2</span></h3>
-                    </div>
-                    <div class="container small-title ">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aliquid totam, sed quas quis magnam fugiat, quidem aliquam excepturi tempore repudiandae non architecto? Error perferendis eum temporibus, vel ut iste.</p>
-                    </div>
-                    <div class="cta-container">
-                        <div class="cta"><a href="index.html" class="child color-white">BUY NOW</a></div>
-                        <div class="cta"><a href="#" class=" child color-white">MORE DETAILS</a></div>
-                    </div>
-                </section>
-            </div>
-            <div class="slide-item slide-3">
-                <section class="slider-content">
-                    <span><img src="./images/icon-slider.png" class="slide-icon"></span>
-                    <div class="big-title">
-                        <h3 class="text-big-title">PRICING <span class="bold">TABLES 3</span></h3>
-                    </div>
-                    <div class="container small-title ">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aliquid totam, sed quas quis magnam fugiat, quidem aliquam excepturi tempore repudiandae non architecto? Error perferendis eum temporibus, vel ut iste.</p>
-                    </div>
-                    <div class="cta-container">
-                        <div class="cta"><a href="index.html" class="child color-white">PURCHASE NOW</a></div>
-                        <div class="cta"><a href="#" class=" child color-white">MORE DETAILS</a></div>
-                    </div>
-                </section>
-               
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#8592;</a>
-            <a class="next" onclick="plusSlides(1)">&#8594;</a>
-            <!-- <div class="positon">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div> -->
+            <div class="slider-item slider-item-2"></div>
+            <div class="slider-item slider-item-3"></div>
         </div>
+    </section>         
     <div class="content">
         <section class="dark-title">
             <div class="container">
+                <div class="bg-img"></div>
                 <div class="content-big-title font">
                     <h3><span  class="font" style="font-weight: 200;">LOREM </span><span  class="font" style="font-weight: 700;">IPSUM</span></h3>
                 </div>
@@ -131,51 +99,66 @@
                     voluptas sit aspernatur aut odit aut fugit
                 </p>
             </div>
-        </section>            
+        </section>
         <section>
             <div class="container pricing-table-1">
                 <div class="pricing-table-1-item">
-                    <h3 class="table-title">beginer</h3>
-                    <div class="pricing-price">
+                    <div class="scale-title">
+                    </div>
+                    <div class="table-title border">
+                        <h3>beginer</h3>
+                    </div>
+                    
+                    <div class="pricing-price border">
                         <div class="pricing-cost">$10</div>
                         <div class="time ">Per Month</div>
                     </div>
-                    <div class="pricing-row-title ">
+                    <div class="pricing-row-title border">
                     </div>
                     <div class="pricing-row">Drop out ramen hustle</div>
                     <div class="pricing-row">Crush revenue traction</div>
                     <div class="pricing-row strike">Crush revenue traction</div>
                     <div class="pricing-row strike">User base minimum viable</div>
                     <div class="pricing-row strike none-border-bottom">Lorem ipsum dolor</div>
-                    <div class="pricing-table-footer">
+                    <div class="pricing-table-footer border">
                         <a href="#" class="order-button none-border-bottom"><i class="fa fa-caret-down rotate"></i>order</a>
                     </div>
+                    <div class="space"></div>
                 </div>
                 <div class="pricing-table-1-item">
-                    <h3 class="table-title">advanced</h3>
-                    <div class="pricing-price  bg-pricing-2">
+                    <div class="scale-title">
+                    </div>
+                    <div class="table-title border">
+                        <h3>advanced</h3>
+                    </div>
+                    <div class="pricing-price bg-pricing-2 border">
                         <div class="pricing-cost">$45</div>
                         <div class="time ">Per Month</div>
                     </div>
-                    <div class="pricing-row-title ">
+                    <div class="pricing-row-title border">
                     </div>
                     <div class="pricing-row">Drop out ramen hustle</div>
                     <div class="pricing-row">Crush revenue traction</div>
                     <div class="pricing-row strike">Crush revenue traction</div>
                     <div class="pricing-row strike">User base minimum viable</div>
                     <div class="pricing-row strike none-border-bottom">Lorem ipsum dolor</div>
-                    <div class="pricing-table-footer">
+                    <div class="pricing-table-footer border">
                         <a href="#" class="order-button"><i class="fa fa-caret-down rotate"></i>order</a>
                     </div>
+                    <div class="space"></div>
                 </div>
                 <div class="pricing-table-1-item">
                     <div class="new-sticker uppercase color-white"><span>new</span></div>
-                    <h3 class="table-title">master</h3>
-                    <div class="pricing-price bg-pricing-3">
+                    <div class="scale-title">
+                    </div>
+                    <div class="table-title border">
+                        <h3>master</h3>
+                    </div>
+                    <div class="pricing-price bg-pricing-3 border">
                         <div class="pricing-cost">$249</div>
                         <div class="time ">Per Month</div>
                     </div>
-                    <div class="pricing-row ">
+                    <div class="pricing-row-title border">
                         <h5 class="sub-title-primary font">Sub title go here</h5>
                         <div class="sub-title-second ">Subtitle second line goes here</div>
                     </div>
@@ -184,18 +167,23 @@
                     <div class="pricing-row strike">Crush revenue traction</div>
                     <div class="pricing-row strike">User base minimum viable</div>
                     <div class="pricing-row strike none-border-bottom">Lorem ipsum dolor</div>
-                    <div class="pricing-table-footer">
+                    <div class="pricing-table-footer border">
                         <a href="#" class="order-button"><i class="fa fa-caret-down rotate"></i>order</a>
                     </div>
+                    <div class="space"></div>
                 </div>
                 
                 <div class="pricing-table-1-item">
-                    <h3 class="table-title">insane</h3>
-                    <div class="pricing-price bg-pricing-4">
+                    <div class="scale-title">
+                    </div>
+                    <div class="table-title border">
+                        <h3>insane</h3>
+                    </div>
+                    <div class="pricing-price bg-pricing-4 border">
                         <div class="pricing-cost">$1399</div>
                         <div class="time ">Per Month</div>
                     </div>
-                    <div class="pricing-row-title">
+                    <div class="pricing-row-title border">
                     </div>
                     <div class="option">
                         <div class="pricing-row">Drop out ramen hustle</div>
@@ -204,9 +192,10 @@
                         <div class="pricing-row strike">User base minimum viable</div>
                         <div class="pricing-row strike none-border-bottom">Lorem ipsum dolor</div>
                     </div>
-                    <div class="pricing-table-footer">
+                    <div class="pricing-table-footer border">
                         <a href="#" class="order-button"><i class="fa fa-caret-down rotate"></i>order</a>
                     </div>
+                    <div class="space"></div>
                 </div>
             </div>
             
@@ -427,9 +416,9 @@
                 </div>
                 <div class="col-3">
                     <section class="row">
-                        <div class="widget-recent-posts">
+                        <div class="widget-recent-posts mg-left">
                         <h3 class="widget-title uppercase color-white bold font">recent posts<i class="fa fa-caret-down"></i></h3>
-                        <ul class="list-item ul-padding">
+                        <ul class="list-item">
                             <li>
                                 <div class="post-item">
                                     <span><div class="avt"></div></span>
@@ -442,8 +431,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li> <hr class="dash-line"></li>
-                            <li>
+                            <li class="padding"> <hr class="dash-line"></li>
+                            <li class="padding">
                                 <div class="post-item">
                                     <span><div class="avt"></div></span>
                                     <div class="post-info">
@@ -455,8 +444,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li><hr class="dash-line"></li>
-                            <li>
+                            <li class="padding"><hr class="dash-line"></li>
+                            <li class="padding">
                                 <div class="post-item">
                                     <span><div class="avt"></div></span>
                                     <div class="post-info">
@@ -472,9 +461,9 @@
                     </div>
                     </section>
                     <section class="row">
-                        <div class="widget-useful-links color-row">
+                        <div class="widget-useful-links color-row mg-left">
                             <h3 class="widget-title uppercase color-white bold font">useful links<i class="fa fa-caret-down"></i></h3>
-                            <ul class="list-links-item ul-padding" style="list-style-position: inside;">
+                            <ul class="list-links-item" style="list-style-position: inside;">
                                 <li>General Information For Users</li>
                                 <li><hr class="dash-line"></li>
                                 <li>Interactive Fairy Tales</li>
@@ -490,31 +479,35 @@
                 </div>
                 <div class="col-3">
                     <section class="row">
-                        <div class="widget-email-us">
+                        <div class="widget-email-us mg-left">
                             <h3 class="widget-title uppercase color-white bold font">email us<i class="fa fa-caret-down"></i></h3>
-                            <ul class="list-item ul-padding">
-                                <li><input type="text" class="text-feild" placeholder="Your name"></li>
-                                <li><input type="email" class="text-feild"placeholder="your@email.address"></li>
-                                <li><textarea class="text-feild" placeholder="Your message" style="height:98px;"></textarea></li>
-                                <li><div class="btn-submit uppercase "><a href=""  class="color-row">send message</a></div></li>
-                            </ul>
+                            <!-- <ul class="list-item"> -->
+                                <div><input type="text" class="text-feild input-name" placeholder="Your name"></div>
+                                <div class="input-email"><input type="email" class="text-feild"placeholder="your@email.address"></div>
+                                <div class="input-message"><textarea class="text-feild input-message" placeholder="Your message" style="height:98px;"></textarea></div>
+                                <div class="btn-submit uppercase "><a href=""  class="color-row">send message</a></div>
+                            <!-- </ul> -->
                         </div>
                     </section>
                     <section class="row">
                         <div class="widget-projects-clients">
                             <h3 class="widget-title uppercase color-white bold title-flex font">projects / clients<i class="fa fa-caret-down"></i></h3>
-                            <div class="slide-client">
+                            <!-- <div class="slider-footer-project"> -->
                                 <div class="container-project">
-                                    <span><div class="project"></div></span>
-                                    <span><div class="project"></div></span>
-                                    <span><div class="project"></div></span>
+                                    <div style="background-color: #315bd6;">1</div>
+                                    <div style="background-color: #c82929;">2</div>
+                                    <div style="background-color: #428bca;">3</div>
+                                    <div style="background-color: #ff5757">4</div>
+                                    <div style="background-color: aqua">5</div>
+                                    <div style="background-color: yellow">6</div>
+                                    <!-- <div style="background-color: aqua;">7</div>
+                                    <div style="background-color: aqua;">8</div>
+                                    <div style="background-color: aqua;">9</div>
+                                    <div style="background-color: aqua">10</div>
+                                    <div style="background-color: aqua">11</div>
+                                    <div style="background-color: aqua">12</div> -->
                                 </div>
-                                <div class="container-project">
-                                    <span><div class="project"></div></span>
-                                    <span><div class="project"></div></span>
-                                    <span><div class="project"></div></span>
-                                </div>
-                            </div>
+                            <!-- </div> -->
                             <div class="group-position">
                                 <span class="dot"></span>
                                 <span class="dot"></span>
@@ -525,37 +518,31 @@
                 </div>
                 <div class="col-3">
                     <section class="row">
-                        <div class="widget-flickr-feed">
+                        <div class="widget-flickr-feed mg-left">
                             <h3 class="widget-title uppercase color-white bold font">flickr feed<i class="fa fa-caret-down"></i></h3>
-                            <div class="widget-flickr-feed">
-                                <div class="row-feed-item">
-                                    <span><div class="item"></div></span>
-                                    <span><div class="item"></div></span>
-                                    <span><div class="item"></div></span>
-                                </div>
-                                <div class="row-feed-item">
-                                    <span><div class="item"></div></span>
-                                    <span><div class="item"></div></span>
-                                    <span><div class="item"></div></span>
-                                </div>
-                                <div class="row-feed-item">
-                                    <span><div class="item"></div></span>
-                                    <span><div class="item"></div></span>
-                                    <span><div class="item"></div></span>
-                                </div>
+                            <div class="container-feeds">
+                                <div style="background-color: #315bd6;">1</div>
+                                <div style="background-color: #c82929;">2</div>
+                                <div style="background-color: #428bca;">3</div>
+                                <div style="background-color: #ff5757">4</div>
+                                <div style="background-color: aqua">5</div>
+                                <div style="background-color: yellow">6</div>
+                                <div style="background-color: hotpink">7</div>
+                                <div style="background-color: purple">8</div>
+                                <div style="background-color: lightblue">9</div>
                             </div>
                         </div>
                     </section>
                     <section class="row">
-                        <div class="widget-newletter">
+                        <div class="widget-newletter mg-left">
                             <h3 class="widget-title uppercase color-white bold padding-top font">new letter<i class="fa fa-caret-down"></i></h3>
-                            <ul class="list-item ul-padding">
-                                <li><p class="color-row">Subscribe to our MailChimp newsletter and stay up to date with all events coming straight in your mailbox:</p></li>
+                            <ul class="list-item">
+                                <li><p class="color-row small-title">Subscribe to our MailChimp newsletter and stay up to date with all events coming straight in your mailbox:</p></li>
                                 <li class="flex-li">
                                     <input type="email" placeholder="Your email address" class="input-email">
                                     <button class="btn-submit-email" style="cursor: pointer; height:40px;  padding: 0 12px; background-color: #394050; border: 1px solid  #394050; margin-left: -4px; width:15%"><i class="fa fa-chevron-right color-row"></i></button>
                                 </li>
-                                <li><p style="color: #4a4b5b;"><span class="aqua-color">*</span> Personal information will be encrypted</p></li>
+                                <li><p style="color: #4a4b5b; margin-top: 14px;"><span class="aqua-color">*</span> Personal information will be encrypted</p></li>
                             </ul>
                         </div>
                     </section>
@@ -587,6 +574,7 @@
             </div>
         </div>
     </footer>
+    
 </body>
 <!-- scroll to top -->
 

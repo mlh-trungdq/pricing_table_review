@@ -416,7 +416,7 @@
                 </div>
                 <div class="col-3">
                     <section class="row">
-                        <div class="widget-recent-posts mg-left">
+                        <div class="widget-recent-posts">
                         <h3 class="widget-title uppercase color-white bold font">recent posts<i class="fa fa-caret-down"></i></h3>
                         <ul class="list-item">
                             <li>
@@ -461,7 +461,7 @@
                     </div>
                     </section>
                     <section class="row">
-                        <div class="widget-useful-links color-row mg-left">
+                        <div class="widget-useful-links color-row">
                             <h3 class="widget-title uppercase color-white bold font">useful links<i class="fa fa-caret-down"></i></h3>
                             <ul class="list-links-item" style="list-style-position: inside;">
                                 <li>General Information For Users</li>
@@ -479,46 +479,64 @@
                 </div>
                 <div class="col-3">
                     <section class="row">
-                        <div class="widget-email-us mg-left">
+                        <div class="widget-email-us">
                             <h3 class="widget-title uppercase color-white bold font">email us<i class="fa fa-caret-down"></i></h3>
                             <!-- <ul class="list-item"> -->
-                                <div><input type="text" class="text-feild input-name" placeholder="Your name"></div>
-                                <div class="input-email"><input type="email" class="text-feild"placeholder="your@email.address"></div>
-                                <div class="input-message"><textarea class="text-feild input-message" placeholder="Your message" style="height:98px;"></textarea></div>
-                                <div class="btn-submit uppercase "><a href=""  class="color-row">send message</a></div>
+                                <form>
+                                    <div><input type="text" class="text-feild input-name" placeholder="Your name"></div>
+                                    <div class="input-email"><input type="email" class="text-feild"placeholder="your@email.address"></div>
+                                    <div class="input-message"><textarea class="text-feild input-message" placeholder="Your message" style="height:98px;"></textarea></div>
+                                    <div class="btn-submit uppercase "><a href=""  class="color-row">send message</a></div>
+                                </form>
                             <!-- </ul> -->
                         </div>
                     </section>
                     <section class="row">
                         <div class="widget-projects-clients">
                             <h3 class="widget-title uppercase color-white bold title-flex font">projects / clients<i class="fa fa-caret-down"></i></h3>
-                            <!-- <div class="slider-footer-project"> -->
-                                <div class="container-project">
-                                    <div style="background-color: #315bd6;">1</div>
-                                    <div style="background-color: #c82929;">2</div>
-                                    <div style="background-color: #428bca;">3</div>
-                                    <div style="background-color: #ff5757">4</div>
-                                    <div style="background-color: aqua">5</div>
-                                    <div style="background-color: yellow">6</div>
-                                    <!-- <div style="background-color: aqua;">7</div>
-                                    <div style="background-color: aqua;">8</div>
-                                    <div style="background-color: aqua;">9</div>
-                                    <div style="background-color: aqua">10</div>
-                                    <div style="background-color: aqua">11</div>
-                                    <div style="background-color: aqua">12</div> -->
+                            <div class="slider-footer-project">
+                                <div class="row-item fade">
+                                    <div class="container-project">
+                                        <div style="background-color: #315bd6;">1</div>
+                                        <div style="background-color: #c82929;">2</div>
+                                        <div style="background-color: #428bca;">3</div>
+                                        <div style="background-color: #ff5757">4</div>
+                                        <div style="background-color: aqua">5</div>
+                                        <div style="background-color: yellow">6</div>
+                                    </div>
                                 </div>
-                            <!-- </div> -->
+                                <div class="row-item fade">
+                                    <div class="container-project">
+                                        <div style="background-color: aqua;">7</div>
+                                        <div style="background-color: aqua;">8</div>
+                                        <div style="background-color: aqua;">9</div>
+                                        <div style="background-color: aqua">10</div>
+                                        <div style="background-color: aqua">11</div>
+                                        <div style="background-color: aqua">12</div>
+                                    </div>
+                                </div>
+                                <div class="row-item fade">
+                                    <div class="container-project">
+                                        <div style="background-color: aqua;">13</div>
+                                        <div style="background-color: aqua;">14</div>
+                                        <div style="background-color: aqua;">15</div>
+                                        <div style="background-color: aqua">16</div>
+                                        <div style="background-color: aqua">17</div>
+                                        <div style="background-color: aqua">18</div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="group-position">
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
+                                <span class="dots" onclick="currentSlide(1)"></span>
+                                <span class="dots" onclick="currentSlide(2)"></span>
+                                <span class="dots" onclick="currentSlide(3)"></span>
                             </div>
                         </div>
                     </section> 
                 </div>
                 <div class="col-3">
                     <section class="row">
-                        <div class="widget-flickr-feed mg-left">
+                        <div class="widget-flickr-feed">
                             <h3 class="widget-title uppercase color-white bold font">flickr feed<i class="fa fa-caret-down"></i></h3>
                             <div class="container-feeds">
                                 <div style="background-color: #315bd6;">1</div>
@@ -534,13 +552,15 @@
                         </div>
                     </section>
                     <section class="row">
-                        <div class="widget-newletter mg-left">
+                        <div class="widget-newletter">
                             <h3 class="widget-title uppercase color-white bold padding-top font">new letter<i class="fa fa-caret-down"></i></h3>
                             <ul class="list-item">
                                 <li><p class="color-row small-title">Subscribe to our MailChimp newsletter and stay up to date with all events coming straight in your mailbox:</p></li>
                                 <li class="flex-li">
-                                    <input type="email" placeholder="Your email address" class="input-email">
-                                    <button class="btn-submit-email" style="cursor: pointer; height:40px;  padding: 0 12px; background-color: #394050; border: 1px solid  #394050; margin-left: -4px; width:15%"><i class="fa fa-chevron-right color-row"></i></button>
+                                    <form>
+                                        <input type="email" placeholder="Your email address" class="input-email">
+                                        <button class="btn-submit-email" style="cursor: pointer; height:40px;  padding: 0 12px; background-color: #394050; border: 1px solid  #394050; margin-left: -4px; width:15%"><i class="fa fa-chevron-right color-row"></i></button>
+                                    </form>
                                 </li>
                                 <li><p style="color: #4a4b5b; margin-top: 14px;"><span class="aqua-color">*</span> Personal information will be encrypted</p></li>
                             </ul>
@@ -574,13 +594,11 @@
             </div>
         </div>
     </footer>
-    
-</body>
-<!-- scroll to top -->
-
-  <!--build:js js/main.min.js -->
+    <!--build:js js/main.min.js -->
   <script src="js/lib/a-library.js"></script>
   <script src="js/lib/another-library.js"></script>
   <script src="js/main.js"></script>
   <!-- endbuild -->
+</body>
+  
 </html>

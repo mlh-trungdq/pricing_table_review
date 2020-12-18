@@ -256,9 +256,13 @@ html {
 
 .slider-container {
   position: relative; }
+<<<<<<< HEAD
   .slider-container .original-dots li button {
     font-size: 0; }
   .slider-container .slick-arrow {
+=======
+  .slider-container .original-dots .slick-arrow {
+>>>>>>> 16c416549859480dd3e5f678a3c32b1920bed3a4
     display: flex;
     justify-content: center;
     align-items: center;
@@ -273,15 +277,21 @@ html {
     transition: 0.6s ease;
     user-select: none;
     z-index: 2; }
-    .slider-container .slick-arrow:hover {
+    .slider-container .original-dots .slick-arrow:hover {
       background-color: #00bcd4; }
   .slider-container .next-arrow {
     right: 0; }
   .slider-container .original-dots {
+    position: absolute;
     list-style-type: none;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); }
+    .slider-container .original-dots li button {
+      font-size: 0; }
   .slider-container button {
     cursor: pointer;
     height: 26px;

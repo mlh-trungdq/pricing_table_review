@@ -55,37 +55,101 @@ $(document).ready(function () {
   });
 });
 
+// //slick slideshow
+// $(document).ready(function () {
+//   $(".slider-container").not(".slick-initialized").slick({
+//     autoplay: true,
+//     autoplaySpeed: 2000,
+//     adaptiveHeight: true,
+//     arrows: true,
+//     prevArrow: '<span class="prev-arrow">&#8592;</span>',
+//     nextArrow: '<span class="next-arrow">&#8594;</span>',
+//     dotsClass: "original-dots",
+//     dots: true,
+//     accessibility: false,
+//   });
+// });
 
-$(document).ready(function () {
-  $(".slider-container").not(".slick-initialized").slick({
-    autoplay: true,
-    autoplaySpeed: 2000,
-    adaptiveHeight: true,
-    arrows: true,
-    prevArrow: '<span class="prev-arrow">&#8592;</span>',
-    nextArrow: '<span class="next-arrow">&#8594;</span>',
-    dotsClass: "original-dots",
-    dots: true,
-    accessibility: false,
-  });
-});
-//slideshow footer
-var slideIndex = 0;
-showSlides();
+//slideshow using javascript
+var slideIndex = 1;
+var myTimer;
+var slideshowContainer;
 
-function showSlides() {
+window.addEventListener("load",function() {
+    showSlides(slideIndex);
+    myTimer = setInterval(function(){plusSlides(1)}, 2000);
+    slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+    slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
+    slideshowContainer.addEventListener('mouseenter', pause)
+    slideshowContainer.addEventListener('mouseleave', resume)
+})
+
+// next and previous control
+function plusSlides(n){
+  clearInterval(myTimer);
+  if (n < 0){
+    showSlides(slideIndex -= 1);
+  } else {
+   showSlides(slideIndex += 1); 
+  }
+  
+  //hover vào mũi tên next và previous thì pause/resume slide
+  if (n === -1){
+    myTimer = setInterval(function(){plusSlides(n + 2)}, 2000);
+  } else {
+    myTimer = setInterval(function(){plusSlides(n + 1)}, 2000);
+  }
+}
+
+//kiểm soát slide hiện tại và đặt lại khoảng thời gian nếu cần
+function currentSlide(n){
+  clearInterval(myTimer);
+  myTimer = setInterval(function(){plusSlides(n + 1)}, 2000);
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n){
   var i;
-  var slides = document.getElementsByClassName("row-item");
-  var dots = document.getElementsByClassName("dots");
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+      slides[i].style.display = "none";
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+      dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
+  slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+pause = () => {
+  clearInterval(myTimer);
+}
+
+resume = () =>{
+  clearInterval(myTimer);
+  myTimer = setInterval(function(){plusSlides(slideIndex)}, 2000);
+}
+
+//slideshow footer
+var sIndex = 0;
+showSlidesFooter();
+
+function showSlidesFooter() {
+  var i;
+  var slideItem = document.getElementsByClassName("row-item");
+  var dotItem = document.getElementsByClassName("dots");
+  for (i = 0; i < slideItem.length; i++) {
+    slideItem[i].style.display = "none";  
+  }
+  sIndex++;
+  if (sIndex > slideItem.length) {sIndex = 1}    
+  for (i = 0; i < dotItem.length; i++) {
+    dotItem[i].className = dotItem[i].className.replace(" active", "");
+  }
+  slideItem[sIndex-1].style.display = "block";  
+  dotItem[sIndex-1].className += " active";
+  setTimeout(showSlidesFooter, 4000); // Change image every 2 seconds
 }

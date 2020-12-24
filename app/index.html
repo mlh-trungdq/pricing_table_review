@@ -15,13 +15,11 @@
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" href="/css/print.css">
   <link rel="stylesheet" href="/css/styles.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <link rel="stylesheet" href="/css/slideshow-styles.css">
 
   <!--endbuild-->
 </head>
   <body>
-    <button class="scroll-top-button" onclick="topFunction()" id="scrollBtn"><a id="scroll" class="smoothScroll" href="#header"><i class="fa fa-chevron-right"></i></a></button>
     <header id="header" class="header bg-color ">
         <div class="container header-menu">
             <div class="logo-main-menu">
@@ -56,7 +54,61 @@
         </div>
     </header>
     <section>
-        <div class="slider-container">
+        <div class="slideshow-container">
+            <div class="slideshow-inner">
+                <div class="mySlides bg-color fade">
+                    <div><img src="./images/icon-slider.png" class="slide-icon"></div>
+                    <div class="big-title">
+                        <h3 class="text-big-title">PRICING <span class="bold">TABLES 1</span></h3>
+                    </div>
+                    <div class="container small-title ">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aliquid totam, sed quas quis magnam fugiat, quidem aliquam excepturi tempore repudiandae non architecto? Error perferendis eum temporibus, vel ut iste.</p>
+                    </div>
+                    <div class="cta-container">
+                        <div class="cta bg-color"><a href="index.html" class="child color-white">PURCHASE NOW</a></div>
+                        <div class="cta bg-color"><a href="#" class=" child color-white">MORE DETAILS</a></div>
+                    </div>
+                </div>
+              
+                <div class="mySlides bg-2 fade">
+                    <div><img src="./images/icon-slider.png" class="slide-icon"></div>
+                    <div class="big-title">
+                        <h3 class="text-big-title">PRICING <span class="bold">TABLES 2</span></h3>
+                    </div>
+                    <div class="container small-title ">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aliquid totam, sed quas quis magnam fugiat, quidem aliquam excepturi tempore repudiandae non architecto? Error perferendis eum temporibus, vel ut iste.</p>
+                    </div>
+                    <div class="cta-container">
+                        <div class="cta bg-color"><a href="index.html" class="child color-white">PURCHASE NOW</a></div>
+                        <div class="cta bg-color"><a href="#" class=" child color-white">MORE DETAILS</a></div>
+                    </div>      
+                </div>
+              
+                <div class="mySlides bg-3 fade">
+                    <div><img src="./images/icon-slider.png" class="slide-icon"></div>
+                    <div class="big-title">
+                        <h3 class="text-big-title">PRICING <span class="bold">TABLES 3</span></h3>
+                    </div>
+                    <div class="container small-title ">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aliquid totam, sed quas quis magnam fugiat, quidem aliquam excepturi tempore repudiandae non architecto? Error perferendis eum temporibus, vel ut iste.</p>
+                    </div>
+                    <div class="cta-container">
+                        <div class="cta bg-color"><a href="index.html" class="child color-white">PURCHASE NOW</a></div>
+                        <div class="cta bg-color"><a href="#" class=" child color-white">MORE DETAILS</a></div>
+                    </div>
+                </div>
+              
+                <a class="prev" onclick='plusSlides(-1)'>&#8592;</a>
+                <a class="next" onclick='plusSlides(1)'>&#8594;</a>
+                <div class="group-dots">
+                    <span class="dot" onclick='currentSlide(1)'></span>
+                    <span class="dot" onclick='currentSlide(2)'></span>
+                    <span class="dot" onclick='currentSlide(3)'></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="slider-container">
             <div class="slider-item bg-color color-white">
                 <span><img src="./images/icon-slider.png" class="slide-icon"></span>
                 <div class="big-title">
@@ -96,14 +148,14 @@
                     <div class="cta bg-color"><a href="#" class=" child color-white">MORE DETAILS</a></div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>         
     <div class="content">
         <section class="dark-title">
             <div class="container">
                 <div class="bg-img"></div>
                 <div class="content-big-title font">
-                    <h3><span  class="font" style="font-weight: 200;">LOREM </span><span  class="font" style="font-weight: 700;">IPSUM</span></h3>
+                    <h3><span  class="font text-big-title">LOREM </span><span  class="font" style="font-weight: 700;">IPSUM</span></h3>
                 </div>
                 <p class="content-description ">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
@@ -614,11 +666,15 @@
             </div>
         </div>
     </footer>
-    
+    <button class="scroll-top-button" onclick="topFunction()" id="scrollBtn"><a id="scroll" class="smoothScroll" href="#header"><i class="fa fa-chevron-right"></i></a></button>
+
 </body>
 <!-- scroll to top -->
 
   <!--build:js js/main.min.js -->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/lib/a-library.js"></script>
   <script src="js/lib/another-library.js"></script>
   <script src="js/main.js"></script>

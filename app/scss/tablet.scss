@@ -23,9 +23,11 @@
     .header-menu {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        // justify-content: space-between;
+        justify-content: center;
+        align-items: center;
         .logo-main-menu {
-            margin: auto;
+            // margin: auto;
             .menu-icon {
                 display: none;
             }

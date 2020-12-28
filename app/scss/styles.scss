@@ -58,6 +58,12 @@
 .header {
   transition: 0.5s ease-in-out;
 }
+.add-sticky-padding {
+  padding: 5px;
+}
+.remove-sticky-padding {
+  padding: 2px 5px;
+}
 .sticky {
   position: fixed;
   top: 0;

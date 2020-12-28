@@ -52,6 +52,12 @@
 .header {
   transition: 0.5s ease-in-out; }
 
+.add-sticky-padding {
+  padding: 5px; }
+
+.remove-sticky-padding {
+  padding: 2px 5px; }
+
 .sticky {
   position: fixed;
   top: 0;
@@ -868,11 +874,10 @@
   .header-menu {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; }
-    .header-menu .logo-main-menu {
-      margin: auto; }
-      .header-menu .logo-main-menu .menu-icon {
-        display: none; }
+    justify-content: center;
+    align-items: center; }
+    .header-menu .logo-main-menu .menu-icon {
+      display: none; }
     .header-menu .nav-menu .menu-responsive {
       display: flex; }
       .header-menu .nav-menu .menu-responsive li {

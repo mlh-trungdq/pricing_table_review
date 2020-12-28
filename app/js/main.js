@@ -3,36 +3,36 @@ window.onscroll = function () {
 };
 //sticky header menu
 function stickyHeader() {
-  var header = document.getElementById("header");
+  let headerElm = document.getElementById("header");
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    header.classList.add("sticky");
-    document.getElementById("header").style.padding = "5px 5px";
+    headerElm.classList.add("sticky", "add-sticky-padding");
+    headerElm.classList.remove("remove-sticky-padding");
   } else {
-    header.classList.remove("sticky");
-    document.getElementById("header").style.padding = "2px 5px";
+    headerElm.classList.remove("sticky", "add-sticky-padding");
+    headerElm.classList.add("remove-sticky-padding");
   }
 }
 
 //responsive header menu
 function myFunction() {
-  var x = document.getElementById("menu-responsive");
-  if (x.className === "menu-responsive") {
-    x.className += " responsive";
+  let headerMenuElm = document.getElementById("menu-responsive");
+  if (headerMenuElm.className === "menu-responsive") {
+    headerMenuElm.className += " responsive";
   } else {
-    x.className = "menu-responsive";
+    headerMenuElm.className = "menu-responsive";
   }
 }
 
 //scroll to top button
 function scrollFunction() {
-  mybutton = document.getElementById("scrollBtn");
+  scrollBtnElm = document.getElementById("scrollBtn");
   if (
     document.body.scrollTop > 500 ||
     document.documentElement.scrollTop > 500
   ) {
-    mybutton.style.display = "block";
+    scrollBtnElm.style.display = "block";
   } else {
-    mybutton.style.display = "none";
+    scrollBtnElm.style.display = "none";
   }
 }
 function topFunction() {
@@ -55,25 +55,10 @@ $(document).ready(function () {
   });
 });
 
-// //slick slideshow
-// $(document).ready(function () {
-//   $(".slider-container").not(".slick-initialized").slick({
-//     autoplay: true,
-//     autoplaySpeed: 2000,
-//     adaptiveHeight: true,
-//     arrows: true,
-//     prevArrow: '<span class="prev-arrow">&#8592;</span>',
-//     nextArrow: '<span class="next-arrow">&#8594;</span>',
-//     dotsClass: "original-dots",
-//     dots: true,
-//     accessibility: false,
-//   });
-// });
-
 //slideshow using javascript
-var slideIndex = 1;
-var myTimer;
-var slideshowContainer;
+let slideIndex = 1;
+let myTimer;
+let slideshowContainer;
 
 window.addEventListener("load",function() {
     showSlides(slideIndex);
@@ -84,43 +69,33 @@ window.addEventListener("load",function() {
     slideshowContainer.addEventListener('mouseleave', resume)
 })
 
-// next and previous control
-function plusSlides(n){
+function plusSlides(indexSlideElm){
   clearInterval(myTimer);
-  if (n < 0){
+  if (indexSlideElm < 0){
     showSlides(slideIndex -= 1);
   } else {
    showSlides(slideIndex += 1); 
   }
-  
-  //hover vào mũi tên next và previous thì pause/resume slide
-  if (n === -1){
-    myTimer = setInterval(function(){plusSlides(n + 2)}, 2000);
-  } else {
-    myTimer = setInterval(function(){plusSlides(n + 1)}, 2000);
-  }
+  myTimer = (indexSlideElm === -1) ? setInterval(function(){plusSlides(indexSlideElm + 2)}, 2000) : setInterval(function(){plusSlides(indexSlideElm + 1)}, 2000);
 }
-
-//kiểm soát slide hiện tại và đặt lại khoảng thời gian nếu cần
-function currentSlide(n){
+function currentSlide(indexSlideElm){
   clearInterval(myTimer);
-  myTimer = setInterval(function(){plusSlides(n + 1)}, 2000);
-  showSlides(slideIndex = n);
+  myTimer = setInterval(function(){plusSlides(indexSlideElm + 1)}, 2000);
+  showSlides(slideIndex = indexSlideElm);
 }
 
-function showSlides(n){
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+function showSlides(indexSlideElm){
+  let slidesElm = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (indexSlideElm > slidesElm.length) {slideIndex = 1}
+  if (indexSlideElm < 1) {slideIndex = slidesElm.length}
+  for (let i = 0; i < slidesElm.length; i++) {
+      slidesElm[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
+  slidesElm[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
 
@@ -134,13 +109,13 @@ resume = () =>{
 }
 
 //slideshow footer
-var sIndex = 0;
+let sIndex = 0;
 showSlidesFooter();
 
 function showSlidesFooter() {
-  var i;
-  var slideItem = document.getElementsByClassName("row-item");
-  var dotItem = document.getElementsByClassName("dots");
+  let i;
+  let slideItem = document.getElementsByClassName("row-item");
+  let dotItem = document.getElementsByClassName("dots");
   for (i = 0; i < slideItem.length; i++) {
     slideItem[i].style.display = "none";  
   }
